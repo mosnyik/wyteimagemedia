@@ -1,211 +1,196 @@
-"use client"
-
+import { ScrollReveal } from "@/components/scroll-reveal"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Users, Globe, Star, Award, Target, Heart, ArrowRight } from "lucide-react"
-import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { Background3D } from "@/components/background-3d"
-import { AIChatAssistant } from "@/components/ai-chat-assistant"
+import { Badge } from "@/components/ui/badge"
+import { Globe, Users, Award, Heart } from "lucide-react"
+import Image from "next/image"
 
 export default function AboutPage() {
-  const values = [
+  const milestones = [
+    { year: "2012", event: "Wyte Image Media Founded", description: "Started as a creative event management company" },
+    { year: "2015", event: "First Nigeria Golden Heart Awards", description: "Launched our flagship awards ceremony" },
     {
-      icon: Star,
-      title: "Excellence",
-      description: "We strive for perfection in every project, delivering results that exceed expectations.",
+      year: "2018",
+      event: "Profile Magazine Launch",
+      description: "Began publishing our lifestyle and business magazine",
     },
+    { year: "2020", event: "International Expansion", description: "Extended operations to the United Kingdom" },
+    {
+      year: "2023",
+      event: "Profile Africa Magazine",
+      description: "Rebranded to Profile Africa Magazine for continental reach",
+    },
+    {
+      year: "2024",
+      event: "Global Recognition",
+      description: "Recognized as a leading international event management company",
+    },
+  ]
+
+  const values = [
     {
       icon: Heart,
       title: "Passion",
-      description: "Our love for what we do drives us to create extraordinary experiences and lasting memories.",
+      description: "We pour our heart into every event, creating experiences that resonate with audiences.",
+    },
+    {
+      icon: Award,
+      title: "Excellence",
+      description: "We strive for perfection in every detail, delivering world-class events consistently.",
+    },
+    {
+      icon: Globe,
+      title: "Global Vision",
+      description: "Our international perspective brings diverse creativity to every project.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "We work closely with our clients as partners, ensuring their vision becomes reality.",
+      description: "We work closely with clients and partners to bring visions to life.",
     },
-    {
-      icon: Target,
-      title: "Innovation",
-      description: "We embrace new technologies and creative approaches to stay ahead of industry trends.",
-    },
-  ]
-
-  const stats = [
-    { number: "10+", label: "Years of Experience" },
-    { number: "500+", label: "Successful Events" },
-    { number: "50K+", label: "Magazine Readers" },
-    { number: "200+", label: "Happy Clients" },
   ]
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <Navbar />
-
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-white to-gray-50">
-        <Background3D />
-        <div className="container mx-auto px-4 text-center z-10 relative">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-700 to-orange-600 bg-clip-text text-transparent leading-tight">
-              About Wyte Image Media
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700 leading-relaxed">
-              Defining excellence across Africa through premium experiences, innovative storytelling, and exceptional
-              service. Based in the United Kingdom, serving clients globally.
-            </p>
-          </div>
+      <section className="relative py-20 bg-gradient-to-br from-background via-card to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" duration={800}>
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4 text-primary border-primary">
+                About Us
+              </Badge>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                Inspiring Global
+                <span className="text-primary block">Creativity</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                For over a decade, Wyte Image Media has been at the forefront of creative event management, transforming
+                visions into extraordinary experiences that inspire and captivate audiences worldwide.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-orange-600 bg-clip-text text-transparent">
-                Our Story
-              </h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Wyte Image Media was born from a vision to elevate Africa's premium lifestyle and business landscape.
-                Based in the United Kingdom, we recognized the need for a company that could seamlessly blend
-                exceptional event management, luxury hospitality services, compelling storytelling, and innovative
-                branding solutions.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                From our UK headquarters to our operations across Africa, we have consistently delivered excellence that
-                has earned us the trust of discerning clients across continents. Our journey is marked by countless
-                successful events, award-winning publications, and brands that have flourished under our guidance.
-              </p>
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center">
-                  <Users className="text-green-600 mr-2" size={20} />
-                  <span className="text-gray-600">Expert Team</span>
-                </div>
-                <div className="flex items-center">
-                  <Globe className="text-orange-600 mr-2" size={20} />
-                  <span className="text-gray-600">Global Reach</span>
-                </div>
-                <div className="flex items-center">
-                  <Award className="text-green-600 mr-2" size={20} />
-                  <span className="text-gray-600">Award-Winning</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="left" duration={800}>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Story</h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    Founded in 2012, Wyte Image Media began as a vision to create events that go beyond ordinary
+                    experiences. We believed that every event should be a platform for inspiration, creativity, and
+                    meaningful connections.
+                  </p>
+                  <p>
+                    From our humble beginnings organizing local events, we've grown into an international event
+                    management company with operations spanning Nigeria and the United Kingdom. Our flagship Nigeria
+                    Golden Heart Awards International has become a prestigious celebration of excellence and
+                    achievement.
+                  </p>
+                  <p>
+                    Today, we continue to push boundaries in event management, combining traditional excellence with
+                    innovative approaches to create unforgettable experiences that resonate with audiences globally.
+                  </p>
                 </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Mission</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  To elevate Africa's premium experiences by delivering exceptional event management, luxury
-                  hospitality, compelling storytelling, and innovative branding solutions that exceed expectations and
-                  create lasting impact from our UK base.
-                </p>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  To be the premier lifestyle and business excellence company connecting Africa with the world,
-                  recognized for our innovation, quality, and commitment to showcasing the best of African talent and
-                  achievement.
-                </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" duration={800}>
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Wyte Image Media Team"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-700 to-orange-600 bg-clip-text text-transparent">
-              Our Impact in Numbers
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-orange-600 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
+      {/* Timeline Section */}
+      <section className="py-20 bg-card/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" duration={600}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Journey</h2>
+              <p className="text-xl text-muted-foreground">Key milestones that shaped our story</p>
+            </div>
+          </ScrollReveal>
+
+          <div className="space-y-8">
+            {milestones.map((milestone, index) => (
+              <ScrollReveal key={milestone.year} direction={index % 2 === 0 ? "left" : "right"} delay={index * 100}>
+                <Card className="hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                      <Badge variant="secondary" className="text-primary bg-primary/10 shrink-0">
+                        {milestone.year}
+                      </Badge>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground mb-2">{milestone.event}</h3>
+                        <p className="text-muted-foreground">{milestone.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-orange-600 bg-clip-text text-transparent">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do and define who we are as a company.
-            </p>
-          </div>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" duration={600}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
+              <p className="text-xl text-muted-foreground">The principles that guide everything we do</p>
+            </div>
+          </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card
-                key={index}
-                className="bg-white border-gray-200 hover:border-green-300 hover:shadow-lg transition-all duration-300 group text-center"
-              >
-                <CardContent className="p-8">
-                  <div className="mb-6 flex justify-center">
-                    <div className="w-16 h-16 rounded-full bg-green-100 group-hover:bg-orange-100 transition-colors duration-300 flex items-center justify-center">
-                      <value.icon
-                        size={32}
-                        className="text-green-600 group-hover:text-orange-600 transition-colors duration-300"
-                      />
+              <ScrollReveal key={value.title} direction="up" delay={index * 100}>
+                <Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 mx-auto">
+                      <value.icon className="h-8 w-8 text-primary" />
                     </div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
+                    <h3 className="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
+                    <p className="text-muted-foreground">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-50 to-orange-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-orange-600 bg-clip-text text-transparent">
-            Ready to Work With Us?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Let's create something extraordinary together. Discover how we can elevate your brand and exceed your
-            expectations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-4 transition-colors duration-300"
-              >
-                Get In Touch
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-green-600 text-green-700 hover:bg-green-50 text-lg px-8 py-4"
-              >
-                View Our Services
-              </Button>
-            </Link>
-          </div>
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal direction="up" duration={800}>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Ready to Create Something Extraordinary?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Let's work together to bring your vision to life and create an event that inspires.
+            </p>
+            <Button size="lg" className="text-lg px-8 py-4">
+              Start Your Project
+            </Button>
+          </ScrollReveal>
         </div>
       </section>
-
-      <Footer />
-      <AIChatAssistant />
-    </div>
+    </main>
   )
 }
