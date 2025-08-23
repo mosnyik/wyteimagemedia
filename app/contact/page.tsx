@@ -1,15 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollReveal } from "@/components/scroll-reveal"
-import { Navigation } from "@/components/navigation"
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollReveal } from "@/components/scroll-reveal";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -18,38 +17,40 @@ export default function ContactPage() {
     phone: "",
     eventType: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@wyteimage.com", "events@wyteimage.com"],
+      details: ["wyteimagemediaofficial@gmail.com"],
       description: "Get in touch for event planning inquiries",
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+44 20 7946 0958", "+234 803 123 4567"],
+      details: ["+44 20 7946 0958"],
       description: "Speak directly with our event specialists",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["London, United Kingdom", "Lagos, Nigeria"],
+      details: ["London, United Kingdom"],
       description: "Our offices are open for consultations",
     },
     {
@@ -58,11 +59,10 @@ export default function ContactPage() {
       details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM"],
       description: "We're here when you need us",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-background">
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-background via-card to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -72,8 +72,9 @@ export default function ContactPage() {
               <span className="text-primary block">Extraordinary Together</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to transform your vision into an unforgettable event? Get in touch with our expert team and let's
-              start planning your next big moment.
+              Ready to transform your vision into an unforgettable event? Get in
+              touch with our expert team and let's start planning your next big
+              moment.
             </p>
           </ScrollReveal>
         </div>
@@ -87,16 +88,22 @@ export default function ContactPage() {
             <ScrollReveal direction="left" duration={800}>
               <Card className="border-border/50 shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-foreground">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-foreground">
+                    Send Us a Message
+                  </CardTitle>
                   <p className="text-muted-foreground">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    Fill out the form below and we'll get back to you within 24
+                    hours.
                   </p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        <label
+                          htmlFor="name"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
                           Full Name *
                         </label>
                         <Input
@@ -110,7 +117,10 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
                           Email Address *
                         </label>
                         <Input
@@ -128,7 +138,10 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                        <label
+                          htmlFor="phone"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
                           Phone Number
                         </label>
                         <Input
@@ -141,7 +154,10 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="eventType" className="block text-sm font-medium text-foreground mb-2">
+                        <label
+                          htmlFor="eventType"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
                           Event Type
                         </label>
                         <Input
@@ -156,7 +172,10 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Message *
                       </label>
                       <Textarea
@@ -171,7 +190,11 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full animate-pulse-glow">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full animate-pulse-glow"
+                    >
                       <Send className="mr-2 h-5 w-5" />
                       Send Message
                     </Button>
@@ -183,7 +206,12 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               {contactInfo.map((info, index) => (
-                <ScrollReveal key={info.title} direction="right" delay={index * 150} duration={600}>
+                <ScrollReveal
+                  key={info.title}
+                  direction="right"
+                  delay={index * 150}
+                  duration={600}
+                >
                   <Card className="border-border/50 hover:border-primary/50 transition-colors duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
@@ -191,15 +219,22 @@ export default function ContactPage() {
                           <info.icon className="h-6 w-6 text-primary" />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-foreground mb-2">{info.title}</h3>
+                          <h3 className="text-lg font-semibold text-foreground mb-2">
+                            {info.title}
+                          </h3>
                           <div className="space-y-1 mb-2">
                             {info.details.map((detail, idx) => (
-                              <p key={idx} className="text-foreground font-medium">
+                              <p
+                                key={idx}
+                                className="text-foreground font-medium"
+                              >
                                 {detail}
                               </p>
                             ))}
                           </div>
-                          <p className="text-muted-foreground text-sm">{info.description}</p>
+                          <p className="text-muted-foreground text-sm">
+                            {info.description}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -215,15 +250,36 @@ export default function ContactPage() {
       <section className="py-20 bg-card/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal direction="up" duration={800}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Start Planning?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Ready to Start Planning?
+            </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              From intimate gatherings to grand celebrations, we're here to make your event dreams come true.
+              From intimate gatherings to grand celebrations, we're here to make
+              your event dreams come true.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              onClick={() =>
+                window.open(
+                  "https://calendly.com/wyteimagemedia/consultation",
+                  "_blank"
+                )
+              }
+            >
               <Button size="lg" className="text-lg px-8 py-4">
                 Schedule Consultation
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 py-4 bg-transparent"
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/wyteimagemedia",
+                    "_blank"
+                  )
+                }
+              >
                 View Our Portfolio
               </Button>
             </div>
@@ -231,5 +287,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

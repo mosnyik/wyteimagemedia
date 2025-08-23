@@ -3,8 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { ArrowRight, Award, Users, Globe } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export function CompanyBrief() {
+  const router = useRouter()
   return (
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +41,7 @@ export function CompanyBrief() {
                 </div>
               </div>
 
-              <Button size="lg" className="group">
+              <Button size="lg" className="group" onClick={()=>{ router.push("/about")}}>
                 Discover Our Story
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>

@@ -15,33 +15,37 @@ export function EventsMagazinesSlider() {
       title: "Nigeria Golden Heart Awards 2023",
       description:
         "A spectacular celebration of excellence featuring over 500 distinguished guests and international recognition.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/event-1.png?height=400&width=600",
     },
     {
       type: "magazine",
       title: "Profile Africa Magazine - Leadership Edition",
-      description: "Featuring inspiring stories of African leaders making global impact across various industries.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Featuring inspiring stories of African leaders making global impact across various industries.",
+      image: "/images/magazine-2.png?height=400&width=600",
     },
     {
       type: "event",
       title: "Corporate Excellence Gala 2023",
-      description: "An exclusive evening celebrating corporate achievements and fostering business networking.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "An exclusive evening celebrating corporate achievements and fostering business networking.",
+      image: "/images/event-2.png?height=400&width=600",
     },
     {
       type: "magazine",
       title: "Profile Africa - Innovation Special",
-      description: "Showcasing groundbreaking innovations and technological advances from across the continent.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Showcasing groundbreaking innovations and technological advances from across the continent.",
+      image: "/images/magazine-1.png?height=400&width=600",
     },
     {
       type: "event",
       title: "Cultural Heritage Festival",
-      description: "A vibrant celebration of African culture, arts, and traditions with international participation.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "A vibrant celebration of African culture, arts, and traditions with international participation.",
+      image: "/images/event-3.png?height=400&width=600",
     },
-  ]
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {

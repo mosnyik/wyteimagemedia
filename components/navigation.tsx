@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter();
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -49,7 +50,7 @@ export function Navigation() {
                 </Link>
               )
             })}
-            <Button className="animate-pulse-glow">Get Quote</Button>
+            <Button className="animate-pulse-glow" onClick={()=>{router.push("/contact")}}>Get Quote</Button>
           </div>
 
           {/* Mobile menu button */}
