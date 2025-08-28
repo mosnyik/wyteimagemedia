@@ -19,9 +19,13 @@ function About() {
       <div className="pb-20">
         <h2 className="custom-heading max-w-screen-xl">
           <p className="font-NeueMontreal-Regular text-3xl md:text-5xl lg:text-5xl text-zinc-900">
-            Ochi is a strategic presentation agency for forward-thinking
-            businesses that need to <u>raise funds</u>, <u>sell prod­ucts</u>,{" "}
-            <u>explain complex ideas</u>, and <u>hire great peo­ple</u>.
+            The Goldern Heart Award is an annual award ceremony organized
+            by Wyte Image Media to celebrate and recognize outstanding
+            individuals and organizations who have made significant
+            contributions to various fields such as <u>business</u>,{" "}
+            <u>leadership</u>, <u>humaniterian services</u>,{" "}
+            <u>entertainment</u>, <u>philanthropy</u>, and{" "}
+            <u>community development</u>.
           </p>
         </h2>
       </div>
@@ -33,6 +37,7 @@ function About() {
         <div className="flex flex-col gap-8 lg:flex-row lg:w-1/2">
           <div className="flex flex-col gap-8 lg:w-1/2">
             <p>
+              Talk about the Events here
               We create tailored presentations to help you persuade your
               colleagues, clients, or investors. Whether it's live or digital,
               delivered for one or a hundred people.

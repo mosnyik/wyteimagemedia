@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import contentImg from "../assets/images/content-image01.jpg";
+import contentImg from "../assets/images/wtye-image-logo.jpeg";
 
-const heroHeading = ["We Create", "Eye-Opening", "Presentations"];
+const heroHeading = ["Wyte", "Image", "Media"];
 const subHeading = [
-  "For public and private companies",
+  "For event management and consultation",
   "From the first pitch to IPO",
 ];
 

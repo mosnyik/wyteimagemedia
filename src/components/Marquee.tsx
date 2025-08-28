@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import contentImg from "../assets/images/wtye-image-logo.jpeg";
+
 
 const marqueeText = "We are ochi ";
 
@@ -17,9 +19,10 @@ function Marquee() {
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
           className="px-4 text-[24vw] whitespace-nowrap leading-none font-FoundersGroteskXCond-Bold uppercase pt-4 -mb-4 lg:pt-8 lg:-mb-[5.5rem] md:pt-6 md:-mb-14"
         >
-          {marqueeText}
+          <img src={contentImg} alt="contentImg" />
+          {/* {marqueeText} */}
         </motion.h1>
-        <motion.h1
+        {/* <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
@@ -42,7 +45,7 @@ function Marquee() {
           className="px-4 text-[24vw] whitespace-nowrap leading-none font-FoundersGroteskXCond-Bold uppercase pt-4 -mb-4 lg:pt-8 lg:-mb-[5.5rem] md:pt-6 md:-mb-14"
         >
           {marqueeText}
-        </motion.h1>
+        </motion.h1> */}
       </div>
     </div>
   );

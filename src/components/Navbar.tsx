@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import splitStringByRegex from "../utils/splitString";
 
-const navLinks = ["Services", "Our work", "About us", "Insights", "Contact us"];
+const navLinks = ["Profile Magazine", "Services", "Events","About us", "Contact us"];
 const socials = [
   { name: "Instagram", link: "" },
   { name: "Behance", link: "" },
