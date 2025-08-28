@@ -1,0 +1,20 @@
+Navbar
+    Make it responsive
+    Using custom fonts downloaded(.ttf)
+    Animations
+
+Landing page
+Marquee
+About
+Playful
+Cards
+Another cards section
+Ready to start project section
+Footer
+
+Todo: 
+Smoth Animations
+Dark mode
+Apply Font condensed
+issue of scroll in navbar menu by locomotive scroll
+issue of hiding content in navbar menu

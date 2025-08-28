@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "FoundersGrotesk-Semibold";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGrotesk-Semibold.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "FoundersGroteskXCond-Bold";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGroteskXCond-Bold.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "FoundersGroteskXCond-Lt";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGroteskXCond-Lt.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "icomoon";
+    src: url("./assets/fonts/icomoon.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url("./assets/fonts/NeueMontreal-Regular.ttf") format("ttf");
+  }
+}
+
+@layer components {
+  .underline-animation {
+    @apply relative;
+  }
+
+  .underline-animation::after {
+    @apply absolute content-[''] bg-black h-2 w-full left-0 bottom-[5px] scale-x-0 hover:scale-x-100 origin-bottom-right hover:origin-bottom-left transition-transform duration-300;
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    @apply absolute content-[''] bg-black h-[1.5px] w-full left-0 bottom-0 scale-x-100 hover:animate-underlineAnimation2;
+  }
+
+  .hover-underline-animation {
+    @apply relative inline-block;
+  }
+
+  .hover-underline-animation::after {
+    @apply absolute content-[''] w-full scale-x-0 h-[1.2px] bottom-0 left-0 bg-zinc-200 transition-transform ease-[cubic-bezier(.215,.61,.355,1)] duration-500 hover:scale-x-100 origin-bottom-right hover:origin-bottom-left;
+  }
+}
+
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+}
+
+/* To hide scrollbar */
+/* @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+} */
