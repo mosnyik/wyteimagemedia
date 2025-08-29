@@ -210,7 +210,7 @@ function Navbar() {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `underline-animation font-FoundersGroteskXCond-Bold leading-[.75px] text-6xl md:text-7xl lg:text-8xl block ${
+                      `underline-animation font-FoundersGroteskXCond-Bold leading-[.75px] text-4xl md:text-7xl lg:text-8xl block ${
                         isActive ? "text-green-400" : "text-black"
                       }`
                     }
