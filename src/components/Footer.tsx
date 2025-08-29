@@ -5,6 +5,8 @@
 //   { name: "Linkedin", link: "" },
 // ];
 
+import { NavLink } from "react-router-dom";
+
 // const addresses = [
 //   "202-1965 W 4th Ave",
 //   "Vancouver, Canada",
@@ -157,12 +159,13 @@ const addresses = [
   "Federal Capital Territory",
 ];
 
+
 const navLinks = [
-  "Services",
-  "Profile Magazine",
-  "Events",
-  "About us",
-  "Contact us",
+  { name: "Profile Magazine", path: "/profile-magazine" },
+  { name: "Services", path: "/services" },
+  { name: "Events", path: "/events" },
+  { name: "About us", path: "/about-us" },
+  { name: "Contact us", path: "/contact-us" },
 ];
 
 const email = "wyteimagemediaofficial@gmail.com";
@@ -192,9 +195,18 @@ function Footer() {
                 <ul>
                   {navLinks.map((item, index) => (
                     <li key={index}>
-                      <a className="link-underline after:bg-zinc-200" href="">
-                        {item}
-                      </a>
+                      <NavLink
+                        to={item.path}
+                        className={({ isActive }) =>
+                          ` after:bg-zinc-200" ${
+                            isActive
+                              ? "text-green-400"
+                              : "text-zinc-100 link-underline"
+                          }`
+                        }
+                      >
+                        {item.name}
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
