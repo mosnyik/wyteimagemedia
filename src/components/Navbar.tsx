@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import splitStringByRegex from "../utils/splitString";
+import { NavLink } from "react-router-dom";
 
-const navLinks = ["Profile Magazine", "Services", "Events","About us", "Contact us"];
+const navLinks = [
+  { name: "Profile Magazine", path: "/profile-magazine" },
+  { name: "Services", path: "/services" },
+  { name: "Events", path: "/events" },
+  { name: "About us", path: "/about-us" },
+  { name: "Contact us", path: "/contact-us" },
+];
 const socials = [
   { name: "Instagram", link: "" },
   { name: "Behance", link: "" },
@@ -61,7 +68,7 @@ function Navbar() {
             : "lg:translate-y-0"
         } ${
           !isNavOpen && "bg-zinc-900 bg-opacity-25 backdrop-blur-sm"
-        } transition-all duration-500 fixed z-[999] w-full px-6 lg:px-14 py-6 font-NeueMontreal-Regular flex justify-between items-center`}
+        } transition-all duration-500 fixed z-[999] w-full px-12 lg:px-14 py-6 font-NeueMontreal-Regular flex justify-between items-center`}
       >
         <div className="logo z-[999] cursor-pointer">
           <h3>
@@ -96,6 +103,8 @@ function Navbar() {
             </svg>
           </h3>
         </div>
+
+        {/* Desktop Links */}
         <ul className="hidden lg:flex links gap-10">
           {navLinks.map((item, index) => (
             <li
@@ -106,17 +115,23 @@ function Navbar() {
                 index === navLinks.length - 1 && "ml-32"
               }`}
             >
-              <span className="nav-text-container pb-1 hover-underline-animation relative flex overflow-hidden">
-                {splitStringByRegex(item).map((character, i) => (
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  `nav-text-container pb-1 hover-underline-animation relative flex overflow-hidden ${
+                    isActive ? "text-green-400" : "text-white"
+                  }`
+                }
+              >
+                {splitStringByRegex(item.name).map((character, i) => (
                   <span
                     className={`${
-                      i == 0 && "uppercase"
+                      i === 0 && "uppercase"
                     } char-container relative`}
                     key={i}
                   >
                     <span
-                      // style={{ transitionDelay: `${i * 0.02}s` }}
-                      className={` ${
+                      className={`${
                         mouseEnteredNavItem === index
                           ? "-translate-y-full"
                           : "translate-y-0"
@@ -125,7 +140,6 @@ function Navbar() {
                       {character}
                     </span>
                     <span
-                      // style={{ transitionDelay: `${i * 0.02}s` }}
                       className={`${
                         mouseEnteredNavItem === index
                           ? "-translate-y-full"
@@ -136,7 +150,7 @@ function Navbar() {
                     </span>
                   </span>
                 ))}
-              </span>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -185,17 +199,25 @@ function Navbar() {
       <div
         className={`z-[99] ${
           isNavOpen && "translate-y-0 opacity-100 duration-[0.35s] lg:hidden"
-        }  -translate-y-full opacity-0 text-black fixed bg-zinc-100 inset-0 px-6 lg:px-14 py-6 pt-32 `}
+        }  -translate-y-full opacity-0 text-black fixed bg-zinc-100 inset-0 px-6 lg:px-14 py-6 pt-32 overflow-y-auto overflow-x-hidden `}
       >
         <div className="max-h-full overflow-y-auto">
           <div className="mb-28">
             <hr className="absolute left-0 w-full border border-black" />
-            <ul className="flex flex-col py-6 gap-12  pt-12 list-none">
+            <ul className="flex flex-col py-6 gap-12 pt-12 list-none">
               {navLinks.map((item, index) => (
-                <li key={index} className="uppercase cursor-pointer ">
-                  <a className="underline-animation font-FoundersGroteskXCond-Bold leading-[.75px] text-6xl md:text-7xl lg:text-8xl inline ">
-                    {item}
-                  </a>
+                <li key={index} className="uppercase cursor-pointer">
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `underline-animation font-FoundersGroteskXCond-Bold leading-[.75px] text-6xl md:text-7xl lg:text-8xl block ${
+                        isActive ? "text-green-400" : "text-black"
+                      }`
+                    }
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    {item.name}
+                  </NavLink>
                 </li>
               ))}
             </ul>

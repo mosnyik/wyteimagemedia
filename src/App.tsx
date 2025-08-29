@@ -1,15 +1,14 @@
 import LocomotiveScroll from "locomotive-scroll";
 import { useEffect, useRef } from "react";
 import "./App.css";
-import About from "./components/About";
-import Eyes from "./components/Eyes";
-import Featured from "./components/Featured";
-import Footer from "./components/Footer";
-import LandingPage from "./components/LandingPage";
-import Marquee from "./components/Marquee";
-import Navbar from "./components/Navbar";
-import ReadyToStart from "./components/ReadyToStart";
-import Reviews from "./components/Reviews";
+import { Route, Routes } from "react-router-dom";
+import ProfileMagazine from "./pages/ProfileMagazine";
+import Services from "./pages/Services";
+import Events from "./pages/Events";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import About from "./pages/about";
+
 
 function App() {
   const scrollRef = useRef(null);
@@ -64,7 +63,7 @@ function App() {
       data-scroll-container
       className="w-full min-h-screen text-white bg-white"
     >
-      <Navbar />
+      {/* <Navbar />
       <LandingPage />
       <Marquee />
       <About />
@@ -72,7 +71,15 @@ function App() {
       <Featured />
       <Reviews />
       <ReadyToStart />
-      <Footer />
+      <Footer /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile-magazine" element={<ProfileMagazine />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
