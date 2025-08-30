@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EyesBg from "../assets/images/Top-Viewbbcbv-1-1440x921.jpg";
+import EyesBg from "../assets/images/NGHA.jpeg";
 
 function Eyes() {
   const [rotate, setRotate] = useState(0);

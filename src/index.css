@@ -2,6 +2,145 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-black-bg: #000000;
+  --color-black-soft: #0a0a0a;
+  --color-gold: #ffd700;
+  --color-gold-dark: #b8860b;
+  --color-gold-light: #ffed4e;
+  --color-green-accent: #cdea68;
+  --color-green-accent-dark: #9bb83f;
+  --color-dark-teal: #004d43;
+}
+
+@layer base {
+  @font-face {
+    font-family: "FoundersGrotesk-Semibold";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGrotesk-Semibold.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "FoundersGroteskXCond-Bold";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGroteskXCond-Bold.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "FoundersGroteskXCond-Lt";
+    src: url("./assets/fonts/FoundersGrotesk/FoundersGroteskXCond-Lt.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "icomoon";
+    src: url("./assets/fonts/icomoon.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "NeueMontreal-Regular";
+    src: url("./assets/fonts/NeueMontreal-Regular.ttf") format("ttf");
+  }
+}
+
+@layer components {
+  .underline-animation {
+    @apply relative;
+  }
+
+  .underline-animation::after {
+    @apply absolute content-[''] bg-gold h-2 w-full left-0 bottom-[5px] scale-x-0 hover:scale-x-100 origin-bottom-right hover:origin-bottom-left transition-transform duration-300;
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    @apply absolute content-[''] bg-green-accent h-[1.5px] w-full left-0 bottom-0 scale-x-100 hover:animate-underlineAnimation2;
+  }
+
+  .hover-underline-animation {
+    @apply relative inline-block;
+  }
+
+  .hover-underline-animation::after {
+    @apply absolute content-[''] w-full scale-x-0 h-[1.2px] bottom-0 left-0 bg-gold transition-transform ease-[cubic-bezier(.215,.61,.355,1)] duration-500 hover:scale-x-100 origin-bottom-right hover:origin-bottom-left;
+  }
+}
+
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+
+  .bg-black-bg {
+    background-color: var(--color-black-bg);
+  }
+  .bg-black-soft {
+    background-color: var(--color-black-soft);
+  }
+
+  .text-gold-light {
+    color: var(--color-gold-light);
+  }
+  .bg-gold-light {
+    background-color: var(--color-gold-light);
+  }
+  .border-gold-light {
+    border-color: var(--color-gold-light);
+  }
+
+  .text-green-accent-dark {
+    color: var(--color-green-accent-dark);
+  }
+  .bg-green-accent-dark {
+    background-color: var(--color-green-accent-dark);
+  }
+  .border-green-accent-dark {
+    border-color: var(--color-green-accent-dark);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+  .text-gold-dark {
+    color: var(--color-gold-dark);
+  }
+  .text-green-accent {
+    color: var(--color-green-accent);
+  }
+  .text-dark-teal {
+    color: var(--color-dark-teal);
+  }
+
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+  .bg-gold-dark {
+    background-color: var(--color-gold-dark);
+  }
+  .bg-green-accent {
+    background-color: var(--color-green-accent);
+  }
+  .bg-dark-teal {
+    background-color: var(--color-dark-teal);
+  }
+
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+  .border-gold-dark {
+    border-color: var(--color-gold-dark);
+  }
+  .border-green-accent {
+    border-color: var(--color-green-accent);
+  }
+  .border-dark-teal {
+    border-color: var(--color-dark-teal);
+  }
+}
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   @font-face {
     font-family: "FoundersGrotesk-Semibold";

@@ -82,7 +82,7 @@ export default function ProfileMagazinePage() {
                 <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-6 leading-none">
                   Profile
                 </h1>
-                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-[#cdea68]">
+                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-gold">
                   Africa
                 </h1>
               </div>
@@ -99,7 +99,7 @@ export default function ProfileMagazinePage() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="px-6 py-2 rounded-full border border-zinc-600 text-zinc-300 hover:border-[#cdea68] hover:text-[#cdea68] transition-colors duration-300 font-NeueMontreal-Regular"
+                  className="px-6 py-2 rounded-full border border-zinc-600 text-zinc-300 hover:border-gold hover:text-[#cdea68] transition-colors duration-300 font-NeueMontreal-Regular"
                 >
                   {category}
                 </button>
@@ -113,11 +113,11 @@ export default function ProfileMagazinePage() {
               .map((article) => (
                 <div
                   key={article.id}
-                  className="bg-gradient-to-r from-[#004d43] to-[#cdea68] rounded-2xl p-1 mb-8"
+                  className="bg-gradient-to-r from-[#004d43] to-gold rounded-2xl p-1 mb-8"
                 >
                   <div className="bg-zinc-900 rounded-2xl p-8 lg:p-12 h-full">
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="bg-[#cdea68] text-zinc-900 px-3 py-1 rounded-full text-sm font-NeueMontreal-Regular">
+                    <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
+                      <span className="bg-gold text-zinc-900 px-3 py-1 rounded-full text-sm font-NeueMontreal-Regular">
                         Featured
                       </span>
                       <span className="text-zinc-400 font-NeueMontreal-Regular">
@@ -136,7 +136,7 @@ export default function ProfileMagazinePage() {
                     <p className="font-NeueMontreal-Regular text-lg text-zinc-300 mb-8 max-w-3xl leading-relaxed">
                       {article.excerpt}
                     </p>
-                    <button className="bg-[#cdea68] text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300">
+                    <button className="bg-gold text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-dark-gold transition-colors duration-300">
                       Read Full Article →
                     </button>
                   </div>

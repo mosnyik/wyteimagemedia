@@ -35,6 +35,14 @@ export default {
       animation: {
         underlineAnimation2: "underlineAnimation2 0.5s linear 1 ",
       },
+      colors: {
+        gold: "#CCAF08FF",
+        "gold-dark": "#b8860b",
+        "gold-light": "#ffed4e",
+        "green-accent": "#cdea68",
+        "green-accent-dark": "#9bb83f",
+        "dark-teal": "#004d43",
+      },
     },
   },
   plugins: [],

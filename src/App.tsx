@@ -7,8 +7,7 @@ import Services from "./pages/Services";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import About from "./pages/about";
-
+import About from "./pages/About";
 
 function App() {
   const scrollRef = useRef(null);
@@ -63,15 +62,6 @@ function App() {
       data-scroll-container
       className="w-full min-h-screen text-white bg-white"
     >
-      {/* <Navbar />
-      <LandingPage />
-      <Marquee />
-      <About />
-      <Eyes />
-      <Featured />
-      <Reviews />
-      <ReadyToStart />
-      <Footer /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile-magazine" element={<ProfileMagazine />} />

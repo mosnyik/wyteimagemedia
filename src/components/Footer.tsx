@@ -200,7 +200,7 @@ function Footer() {
                         className={({ isActive }) =>
                           ` after:bg-zinc-200" ${
                             isActive
-                              ? "text-green-400"
+                              ? "text-gold"
                               : "text-zinc-100 link-underline"
                           }`
                         }

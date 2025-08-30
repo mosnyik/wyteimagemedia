@@ -174,7 +174,7 @@ import WaveButton from "./ui/WaveButton";
 const projects = [
   {
     title: "Profile Awards Nigeria",
-    imageSource: "/profile-awards-nigeria-ceremony-with-elegant-stage.png",
+    imageSource: "/assets/images/spelling-bee.jpeg",
     links: [
       { title: "Event Management", to: "" },
       { title: "Awards Ceremony", to: "" },

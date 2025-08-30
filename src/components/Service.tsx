@@ -14,7 +14,7 @@ export default function ServicesPage() {
         "Corporate Events",
       ],
       icon: "🎯",
-      color: "from-[#cdea68] to-[#004d43]",
+      color: "from-gold to-[#004d43]",
     },
     {
       title: "Event & Brand Consultation",
@@ -27,7 +27,7 @@ export default function ServicesPage() {
         "Creative Direction",
       ],
       icon: "💡",
-      color: "from-[#004d43] to-[#cdea68]",
+      color: "from-[#004d43] to-gold",
     },
     {
       title: "International Concerts",
@@ -40,7 +40,7 @@ export default function ServicesPage() {
         "Fund Raising",
       ],
       icon: "🎵",
-      color: "from-[#cdea68] to-[#004d43]",
+      color: "from-gold to-[#004d43]",
     },
     {
       title: "Publicity & Promotions",
@@ -53,7 +53,7 @@ export default function ServicesPage() {
         "Brand Promotion",
       ],
       icon: "📢",
-      color: "from-[#004d43] to-[#cdea68]",
+      color: "from-[#004d43] to-gold",
     },
     {
       title: "Branding Services",
@@ -66,7 +66,7 @@ export default function ServicesPage() {
         "Visual Design",
       ],
       icon: "🎨",
-      color: "from-[#cdea68] to-[#004d43]",
+      color: "from-gold to-[#004d43]",
     },
   ];
 
@@ -124,7 +124,7 @@ export default function ServicesPage() {
                 <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-6 leading-none">
                   Our
                 </h1>
-                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-[#cdea68]">
+                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-gold">
                   Services
                 </h1>
               </div>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                           </p>
                         </div>
                         <div className="lg:w-80">
-                          <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-6 text-[#cdea68]">
+                          <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-6 text-gold">
                             Key Features
                           </h3>
                           <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
@@ -190,7 +190,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center group">
-                  <div className="bg-[#004d43] rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#cdea68] transition-colors duration-300">
+                  <div className="bg-[#004d43] rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-colors duration-300">
                     <span className="font-FoundersGroteskXCond-Bold text-2xl text-white group-hover:text-zinc-900">
                       {step.step}
                     </span>
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                   className="bg-zinc-800 rounded-2xl p-8 lg:p-10"
                 >
                   <div className="mb-6">
-                    <div className="text-[#cdea68] text-4xl mb-4">"</div>
+                    <div className="text-gold text-4xl mb-4">"</div>
                     <p className="font-NeueMontreal-Regular text-lg text-zinc-300 leading-relaxed mb-6">
                       {testimonial.quote}
                     </p>
@@ -235,7 +235,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-[#004d43] to-[#cdea68] rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#004d43] to-gold rounded-2xl p-1">
             <div className="bg-zinc-900 rounded-2xl p-8 lg:p-12 text-center">
               <h2 className="font-FoundersGroteskXCond-Bold text-3xl lg:text-5xl mb-6">
                 Ready to Get Started?
@@ -245,7 +245,7 @@ export default function ServicesPage() {
                 business objectives with our comprehensive service offerings.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-[#cdea68] text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300">
+                <button className="bg-gold text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300">
                   Start Your Project
                 </button>
                 <button className="border border-zinc-600 text-zinc-300 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:border-[#cdea68] hover:text-[#cdea68] transition-colors duration-300">

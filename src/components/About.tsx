@@ -1,5 +1,5 @@
 import WaveButton from "./ui/WaveButton";
-import AboutImage from "../assets/images/Homepage-Photo-663x469.jpg";
+import AboutImage from "../assets/images/NGHA-women.jpeg";
 
 const socials = [
   { name: "Instagram", link: "" },

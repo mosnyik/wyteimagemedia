@@ -1,5 +1,10 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+// import AboutImage from "../assets/images/NGHA-women.jpeg";
+import FestusImage from "../assets/images/team/festus.png";
+import CreativeImage from "../assets/images/team/festus.png";
+import OperationsImage from "../assets/images/team/festus.png";
+import InternationalImage from "../assets/images/team/festus.png";
 
 export default function AboutUsPage() {
   const teamMembers = [
@@ -7,25 +12,25 @@ export default function AboutUsPage() {
       name: "Festus Odunze",
       position: "Executive Director & Founder",
       bio: "Visionary leader who founded Wyte Image Media in 2012 with Profile Awards Nigeria, inspiring global audiences through creative event production.",
-      image: "from-[#cdea68] to-[#004d43]",
+      image: FestusImage,
     },
     {
       name: "Creative Team",
       position: "Event Production",
       bio: "Award-winning team specializing in event management, brand development and creative storytelling.",
-      image: "from-[#004d43] to-[#cdea68]",
+      image: CreativeImage,
     },
     {
       name: "Operations Team",
       position: "Event Coordination",
       bio: "Expert team in project management and client relations with a passion for excellence in event execution.",
-      image: "from-[#cdea68] to-[#004d43]",
+      image: OperationsImage,
     },
     {
       name: "International Team",
       position: "Global Operations",
       bio: "International team managing operations across Nigeria, UK and global markets for seamless event delivery.",
-      image: "from-[#004d43] to-[#cdea68]",
+      image: InternationalImage,
     },
   ];
 
@@ -115,7 +120,7 @@ export default function AboutUsPage() {
                 <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-6 leading-none">
                   About
                 </h1>
-                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-[#cdea68]">
+                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-gold">
                   Us
                 </h1>
               </div>
@@ -131,7 +136,7 @@ export default function AboutUsPage() {
 
           {/* Mission Statement */}
           <div className="mb-24">
-            <div className="bg-gradient-to-r from-[#004d43] to-[#cdea68] rounded-2xl p-1">
+            <div className="bg-gradient-to-r from-[#004d43] to-gold rounded-2xl p-1">
               <div className="bg-zinc-900 rounded-2xl p-8 lg:p-16 text-center">
                 <h2 className="font-FoundersGroteskXCond-Bold text-3xl lg:text-5xl mb-8">
                   Our Mission
@@ -152,7 +157,7 @@ export default function AboutUsPage() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="font-FoundersGroteskXCond-Bold text-4xl lg:text-6xl text-[#cdea68] mb-2">
+                  <div className="font-FoundersGroteskXCond-Bold text-4xl lg:text-6xl text-gold mb-2">
                     {stat.number}
                   </div>
                   <div className="font-NeueMontreal-Regular text-zinc-400">
@@ -192,7 +197,7 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-[#cdea68] to-[#004d43] rounded-2xl h-96 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-gold to-[#004d43] rounded-2xl h-96 flex items-center justify-center">
                 <div className="text-6xl">🏆</div>
               </div>
             </div>
@@ -208,7 +213,7 @@ export default function AboutUsPage() {
                 <div key={index} className="text-center group">
                   <div className="bg-zinc-800 rounded-xl p-8 hover:bg-zinc-700 transition-colors duration-300 h-full">
                     <div className="text-4xl mb-6">{value.icon}</div>
-                    <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-4 group-hover:text-[#cdea68] transition-colors duration-300">
+                    <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-4 group-hover:text-gold transition-colors duration-300">
                       {value.title}
                     </h3>
                     <p className="font-NeueMontreal-Regular text-zinc-400 leading-relaxed">
@@ -232,7 +237,7 @@ export default function AboutUsPage() {
                   className="flex flex-col lg:flex-row lg:items-center gap-8"
                 >
                   <div className="lg:w-24 flex-shrink-0">
-                    <div className="bg-[#cdea68] text-zinc-900 rounded-full w-16 h-16 flex items-center justify-center font-FoundersGroteskXCond-Bold text-lg">
+                    <div className="bg-gold text-zinc-900 rounded-full w-16 h-16 flex items-center justify-center font-FoundersGroteskXCond-Bold text-lg">
                       {milestone.year}
                     </div>
                   </div>
@@ -257,15 +262,17 @@ export default function AboutUsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <div key={index} className="text-center group">
-                  <div
-                    className={`bg-gradient-to-br ${member.image} rounded-xl h-64 mb-6 flex items-center justify-center`}
-                  >
-                    <div className="text-6xl">👤</div>
+                  <div className="rounded-xl h-64 mb-6 overflow-hidden ">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full  object-cover object-top"
+                    />
                   </div>
-                  <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-2 group-hover:text-[#cdea68] transition-colors duration-300">
+                  <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-2 group-hover:text-gold transition-colors duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-[#cdea68] font-NeueMontreal-Regular mb-3">
+                  <p className="text-gold font-NeueMontreal-Regular mb-3">
                     {member.position}
                   </p>
                   <p className="font-NeueMontreal-Regular text-zinc-400 text-sm leading-relaxed">
@@ -277,7 +284,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-[#004d43] to-[#cdea68] rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#004d43] to-gold rounded-2xl p-1">
             <div className="bg-zinc-900 rounded-2xl p-8 lg:p-12 text-center">
               <h2 className="font-FoundersGroteskXCond-Bold text-3xl lg:text-5xl mb-6">
                 Ready to Work Together?
@@ -287,7 +294,7 @@ export default function AboutUsPage() {
                 learn about your vision and help bring it to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-[#cdea68] text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300">
+                <button className="bg-gold text-zinc-900 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300">
                   Start a Project
                 </button>
                 <button className="border border-zinc-600 text-zinc-300 px-8 py-4 rounded-full font-NeueMontreal-Regular hover:border-[#cdea68] hover:text-[#cdea68] transition-colors duration-300">
