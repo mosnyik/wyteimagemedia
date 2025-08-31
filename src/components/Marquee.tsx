@@ -57,7 +57,7 @@
 
 import { motion } from "framer-motion";
 
-const marqueeText = "Wyte Image Media • Creating Global Inspiration • ";
+const marqueeText = "The Golden Heart Awards International";
 
 function Marquee() {
   return (

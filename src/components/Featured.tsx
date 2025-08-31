@@ -170,6 +170,8 @@
 import { motion, useAnimation } from "framer-motion";
 import TagButton from "./ui/TagButton";
 import WaveButton from "./ui/WaveButton";
+import InternationalImage from "../assets/images/team/festus.png";
+
 
 const projects = [
   {
@@ -183,7 +185,7 @@ const projects = [
   },
   {
     title: "Queen of Northern Nigeria",
-    imageSource: "/beauty-pageant-stage-with-cultural-nigerian-decora.png",
+    imageSource: InternationalImage,
     links: [
       { title: "Beauty Pageant", to: "" },
       { title: "Cultural Heritage", to: "" },
@@ -191,7 +193,7 @@ const projects = [
   },
   {
     title: "Nigerian Golden Hearts Awards",
-    imageSource: "/prestigious-awards-ceremony-in-abuja-with-golden-h.png",
+    imageSource: InternationalImage,
     links: [
       { title: "Awards Ceremony", to: "" },
       { title: "Event Production", to: "" },
@@ -200,7 +202,7 @@ const projects = [
   },
   {
     title: "Spelling Bee Competition",
-    imageSource: "/children-spelling-bee-competition-with-educational.png",
+    imageSource: InternationalImage,
     links: [
       { title: "Educational Event", to: "" },
       { title: "Youth Development", to: "" },
@@ -208,7 +210,7 @@ const projects = [
   },
   {
     title: "Profile Africa Magazine",
-    imageSource: "/professional-magazine-cover-featuring-african-lead.png",
+    imageSource: InternationalImage,
     links: [
       { title: "Magazine Publishing", to: "" },
       { title: "Content Creation", to: "" },
@@ -217,7 +219,7 @@ const projects = [
   },
   {
     title: "International Concerts",
-    imageSource: "/concert-stage-with-professional-lighting-and-sound.png",
+    imageSource: InternationalImage,
     links: [
       { title: "Concert Production", to: "" },
       { title: "Event Coordination", to: "" },

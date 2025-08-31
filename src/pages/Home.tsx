@@ -1,5 +1,5 @@
 import About from "../components/About";
-import Eyes from "../components/Eyes";
+// import Eyes from "../components/Eyes";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import LandingPage from "../components/LandingPage";
@@ -18,7 +18,7 @@ export default function Home() {
       <LandingPage />
       <Marquee />
       <About />
-      <Eyes />
+      {/* <Eyes /> */}
       <Featured />
       <Reviews />
       <ReadyToStart />

@@ -72,14 +72,12 @@
 
 // export default LandingPage;
 
-
 "use client";
 
-import { motion } from "framer-motion";
-import contentImg from "../assets/images/wtye-image-logo.jpeg";
+// import { motion } from "framer-motion";
+import contentImg from "../assets/images/PM25.jpeg";
 
-
-const heroHeading = ["Wyte", "Image", "Media"];
+// const heroHeading = ["Wyte", "Image", "Media"];
 const subHeading = [
   "Creating global inspiration through creative event production",
   "From concept to execution",
@@ -91,7 +89,7 @@ function LandingPage() {
       data-scroll
       data-scroll-section
       data-scroll-speed="-.3"
-      className="px-6 lg:px-14 w-full h-full bg-zinc-900"
+      className=" w-full h-full bg-zinc-900"
     >
       {/* <div className="heading relative pt-44 pb-48 font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase">
         {heroHeading.map((item, index) => (
@@ -115,9 +113,19 @@ function LandingPage() {
           </div>
         ))}
       </div> */}
-      <div className="heading relative pt-44 pb-48 font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase flex items-start">
-        {/* WIM box */}
-        <motion.div
+      <div
+        data-scroll
+        data-scroll-section
+        data-scroll-speed="-0.7"
+        className="w-[100vw]"
+      >
+        <picture className="w-[100vw] flex justify-center items-center">
+          <img className="w-full" src={contentImg} alt="contentImg" />
+        </picture>
+      </div>
+      {/* <div className="heading relative pt-44 pb-48 font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase flex items-start"> */}
+      {/* WIM box */}
+      {/* <motion.div
           initial={{ width: 0 }}
           animate={{ width: "9vw" }}
           transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
@@ -127,17 +135,17 @@ function LandingPage() {
                flex items-center justify-center"
         >
           <img src={contentImg} alt="contentImg" />
-        </motion.div>
+        </motion.div> */}
 
-        {/* Words stacked left-aligned */}
-        <div className="flex flex-col leading-none">
+      {/* Words stacked left-aligned */}
+      {/* <div className="flex flex-col leading-none">
           {heroHeading.map((item, index) => (
             <h1 key={index} className="mb-2">
               {item}
             </h1>
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       <hr className="absolute left-0 w-full border border-t-zinc-200" />
       <div className="sub-heading flex flex-col pb-36 md:flex-row md:gap-4 justify-between">
