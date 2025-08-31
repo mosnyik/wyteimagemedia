@@ -3,16 +3,35 @@
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import TagButton from "./ui/TagButton";
 import WaveButton from "./ui/WaveButton";
-import InternationalImage from "../assets/images/team/festus.png";
-import GHAImage1 from "../assets/images/pan/pm1.jpeg";
-import GHAImage2 from "../assets/images/pan/slimz-gha.jpeg";
-import GHAImage3 from "../assets/images/pan/slimz-gha.jpeg";
+// import InternationalImage from "../assets/images/team/festus.png";
+import pan1 from "../assets/images/pan/pan1.png";
+import pan2 from "../assets/images/pan/pan2.png";
+import pan3 from "../assets/images/pan/pan3.jpeg";
+import pan4 from "../assets/images/pan/pan4.jpeg";
+import pan5 from "../assets/images/pan/pan5.jpeg";
+import gha1 from "../assets/images/gha/gha1.png";
+import gha2 from "../assets/images/gha/gha2.png";
+import gha3 from "../assets/images/gha/gha3.jpeg";
+import gha4 from "../assets/images/gha/gha4.jpeg";
+import qnn1 from "../assets/images/qnn/qnn1.jpeg";
+import qnn2 from "../assets/images/qnn/qnn2.jpeg";
+import qnn3 from "../assets/images/qnn/qnn3.jpeg";
+import qnn4 from "../assets/images/qnn/qnn4.jpeg";
+import qnn5 from "../assets/images/qnn/qnn5.jpeg";
+import qnn6 from "../assets/images/qnn/qnn6.jpeg";
+import qnn7 from "../assets/images/qnn/qnn7.jpeg";
+import sbc1 from "../assets/images/sbc/sbc1.jpeg";
+import sbc2 from "../assets/images/sbc/sbc2.jpeg";
+import sbc3 from "../assets/images/sbc/sbc3.jpeg";
+import sbc4 from "../assets/images/sbc/sbc4.jpeg";
+import sbc5 from "../assets/images/sbc/sbc5.jpeg";
+import sbc6 from "../assets/images/sbc/sbc6.jpeg";
 import { useState, useEffect, useRef } from "react";
 
 const projects = [
   {
     title: "Profile Awards Nigeria",
-    images: [GHAImage1, GHAImage2, GHAImage3],
+    images: [pan1, pan2, pan3, pan4, pan5],
     links: [
       { title: "Event Management", to: "" },
       { title: "Awards Ceremony", to: "" },
@@ -21,7 +40,7 @@ const projects = [
   },
   {
     title: "The Golden Hearts Awards",
-    images: [InternationalImage, InternationalImage, InternationalImage],
+    images: [gha1, gha2, gha3, gha4],
     links: [
       { title: "Awards Ceremony", to: "" },
       { title: "Event Production", to: "" },
@@ -30,7 +49,15 @@ const projects = [
   },
   {
     title: "Queen of Northern Nigeria",
-    images: [InternationalImage, InternationalImage, InternationalImage],
+    images: [qnn1, qnn2, qnn3, qnn4, qnn5, qnn6, qnn7],
+    links: [
+      { title: "Beauty Pageant", to: "" },
+      { title: "Cultural Heritage", to: "" },
+    ],
+  },
+  {
+    title: "Spelling Bee Competition",
+    images: [sbc1, sbc2,sbc3, sbc4, sbc5, sbc6],
     links: [
       { title: "Beauty Pageant", to: "" },
       { title: "Cultural Heritage", to: "" },
