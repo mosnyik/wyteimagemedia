@@ -1,5 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import logoImg from "../assets/images/logos/wyte.svg";
+
 export default function EventsPage() {
   const upcomingEvents = [
     {
@@ -100,17 +102,39 @@ export default function EventsPage() {
       <div className="px-6 lg:px-14 pt-32 pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
-              <div className="flex-1">
-                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-6 leading-none">
+            <div
+              className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
+              style={{
+                backgroundImage: `url(${logoImg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+              <div className="flex-1 relative z-10 flex flex-col justify-center lg:justify-end">
+                <h1
+                  className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-2 sm:mb-6 leading-none text-white drop-shadow-2xl"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)",
+                  }}
+                >
                   Our
                 </h1>
-                <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-7xl lg:text-9xl uppercase mb-8 leading-none text-gold">
+                <h1
+                  className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-6 sm:mb-8 leading-none text-gold drop-shadow-2xl"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)",
+                  }}
+                >
                   Events
                 </h1>
               </div>
-              <div className="lg:max-w-md">
-                <p className="font-NeueMontreal-Regular text-lg lg:text-xl text-zinc-300 leading-relaxed">
+              <div className="lg:max-w-md relative z-10">
+                <p className="font-NeueMontreal-Regular text-lg lg:text-xl text-white drop-shadow-md">
                   Join us at our upcoming events where industry leaders,
                   innovators, and visionaries come together to shape the future
                   and create meaningful connections.

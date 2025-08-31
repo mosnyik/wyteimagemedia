@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import LandingPage from "../components/LandingPage";
 import Marquee from "../components/Marquee";
 import Navbar from "../components/Navbar";
-import ReadyToStart from "../components/ReadyToStart";
 import Reviews from "../components/Reviews";
 
 export default function Home() {
@@ -18,10 +17,8 @@ export default function Home() {
       <LandingPage />
       <Marquee />
       <About />
-      {/* <Eyes /> */}
       <Featured />
       <Reviews />
-      <ReadyToStart />
       <Footer />
       </div>;
 }
