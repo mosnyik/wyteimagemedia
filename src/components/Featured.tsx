@@ -8,7 +8,7 @@ import pan1 from "../assets/images/pan/pan1.png";
 import pan2 from "../assets/images/pan/pan2.png";
 import pan3 from "../assets/images/pan/pan3.jpeg";
 import pan4 from "../assets/images/pan/pan4.jpeg";
-import pan5 from "../assets/images/pan/pan5.jpeg";
+import gha5 from "../assets/images/gha/gha5.jpeg";
 import gha1 from "../assets/images/gha/gha1.png";
 import gha2 from "../assets/images/gha/gha2.png";
 import gha3 from "../assets/images/gha/gha3.jpeg";
@@ -31,7 +31,7 @@ import { useState, useEffect, useRef } from "react";
 const projects = [
   {
     title: "Profile Awards Nigeria",
-    images: [pan1, pan2, pan3, pan4, pan5],
+    images: [pan1, pan2, pan3, pan4],
     links: [
       { title: "Event Management", to: "" },
       { title: "Awards Ceremony", to: "" },
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     title: "The Golden Hearts Awards",
-    images: [gha1, gha2, gha3, gha4],
+    images: [gha1, gha2, gha3, gha4, gha5],
     links: [
       { title: "Awards Ceremony", to: "" },
       { title: "Event Production", to: "" },
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     title: "Spelling Bee Competition",
-    images: [sbc1, sbc2,sbc3, sbc4, sbc5, sbc6],
+    images: [sbc1, sbc2, sbc3, sbc4, sbc5, sbc6],
     links: [
       { title: "Beauty Pageant", to: "" },
       { title: "Cultural Heritage", to: "" },
