@@ -37,15 +37,17 @@ function About() {
           <div className="flex flex-col gap-8 lg:w-1/2">
             <p>
               The Golden Heart Awards International is one of the most highly
-              regarded and prestigious accolades that an recieve. Anyone can be nomenatted 
-              through our social media handles, but only outstanding personalities are honored.
+              regarded and prestigious accolades that an individual can recieve.
+              Anyone can be nomenatted through our social media handles, 
+              but only outstanding personalities are honored.
             </p>
             <p>
-              Anyone based anywhere in the world that meets the criterial can be nomenatted 
-              for The Golden Heart Awards. 
+              Anyone based anywhere in the world that meets the criterial 
+              can be nomenatted for The Golden Heart Awards. 
             </p>
             <p>
-              The Golden Heart Award International is staged annually, and can be staged in any country.
+              The Golden Heart Award International is staged annually, 
+              and can be staged in any country.
             </p>
           </div>
           <div className="lg:mt-auto lg:ml-auto">
@@ -64,26 +66,6 @@ function About() {
       </div>
 
       <hr className="absolute left-0 w-full border border-t-zinc-900" />
-
-      {/* <div className="pt-6 flex flex-col gap-10 lg:flex-row">
-        <div className="lg:w-1/2">
-          <h1 className="mb-8 font-NeueMontreal-Regular text:3xl lg:text-5xl text-zinc-900">
-            Our approach
-          </h1>
-          <WaveButton
-            primaryColor={"#18181b"} //text-zinc-900
-            secondaryColor={"#f4f4f5"} //text-zinc-200
-            text={"Read More"}
-          />
-        </div>
-        <div>
-          <img
-            className="rounded-3xl"
-            src={AboutImage}
-            alt="About-Page-Photo"
-          />
-        </div>
-      </div> */}
     </div>
   );
 }

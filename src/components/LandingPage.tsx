@@ -1,10 +1,7 @@
 "use client";
 
-// import { motion } from "framer-motion";
 import contentImg from "../assets/images/wyte-banner.jpg";
-// import logoImg from "../assets/images/logos/wyte.svg";
 
-// const heroHeading = ["Wyte", "Image", "Media"];
 const subHeading = [
   "Creating global inspiration through creative event production",
   "From concept to execution",
