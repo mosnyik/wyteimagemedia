@@ -2,7 +2,7 @@
 
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import TagButton from "./ui/TagButton";
-import WaveButton from "./ui/WaveButton";
+// import WaveButton from "./ui/WaveButton";
 import pan1 from "../assets/images/pan/pan1.png";
 import pan2 from "../assets/images/pan/pan2.png";
 import pan3 from "../assets/images/pan/pan3.jpeg";
@@ -295,13 +295,13 @@ function Featured() {
           </div>
         ))}
       </div>
-      <div className="w-full flex justify-center items-center">
+      {/* <div className="w-full flex justify-center items-center">
         <WaveButton
           primaryColor={"#f4f4f5"} //text-zinc-200
           secondaryColor={"#18181b"} //text-zinc-900
           text={"View All Projects"}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
