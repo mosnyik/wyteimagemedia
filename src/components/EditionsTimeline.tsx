@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 // Import your edition images
 import edition9a from "../assets/images/gha/gha1.png";
-import edition9b from "../assets/images/gha/gha2.png";
+import edition9b from "../assets/images/gha/gha2.jpeg";
 import edition9c from "../assets/images/gha/gha3.jpeg";
 // import edition9a from "../assets/images/edit3ions/edition9a.jpg";
 // import edition9b from "../assets/images/editions/edition9b.jpg";
