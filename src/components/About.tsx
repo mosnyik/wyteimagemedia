@@ -1,6 +1,3 @@
-// import WaveButton from "./ui/WaveButton";
-// import AboutImage from "../assets/images/NGHA-women.jpeg";
-
 const socials = [
   { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
   { name: "YouTube", link: "" },

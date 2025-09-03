@@ -10,18 +10,21 @@ const navLinks = [
   { name: "About us", path: "/about-us" },
   { name: "Contact us", path: "/contact-us" },
 ];
+
+
 const socials = [
-  { name: "Instagram", link: "" },
-  { name: "Behance", link: "" },
-  { name: "Facebook", link: "" },
-  { name: "Linkedin", link: "" },
+  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+  { name: "YouTube", link: "" },
+  { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
+  // { name: "Linkedin", link: "" },
 ];
+
 const addresses = [
-  "202-1965 W 4th Ave",
-  "Vancouver, Canada",
+  "United Kingdom",
+  "Leeds",
   "",
-  "30 Chukarina St",
-  "Lviv, Ukraine",
+  "Abuja, Nigeria",
+  "Federal Capital Territory",
 ];
 const email = "wyteimagemediaofficial@gmail.com";
 

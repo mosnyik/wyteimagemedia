@@ -37,19 +37,19 @@ export default function ContactUsPage() {
 
   const contactInfo = [
     {
-      title: "Vancouver Office",
-      address: "202-1965 W 4th Ave\nVancouver, Canada",
-      phone: "+1 (604) 555-0123",
-      email: "vancouver@wyteimage.com",
+      title: "UK Office",
+      address: "Leeds, United Kingdom",
+      phone: "+447 733 7865",
+      email: "wyteimagemediaofficial@gmail.com",
       icon: "🏢",
     },
-    {
-      title: "Lviv Office",
-      address: "30 Chukarina St\nLviv, Ukraine",
-      phone: "+380 32 555-0123",
-      email: "lviv@wyteimage.com",
-      icon: "🌍",
-    },
+    // {
+    //   title: "Lviv Office",
+    //   address: "30 Chukarina St\nLviv, Ukraine",
+    //   phone: "+380 32 555-0123",
+    //   email: "lviv@wyteimage.com",
+    //   icon: "🌍",
+    // },
   ];
 
   const serviceOptions = [
@@ -83,6 +83,12 @@ export default function ContactUsPage() {
       answer:
         "Absolutely. We work with various budget ranges and will create a customized solution that maximizes value while meeting your specific requirements and objectives.",
     },
+  ];
+  const socials = [
+    { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+    { name: "YouTube", link: "" },
+    { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
+    // { name: "Linkedin", link: "" },
   ];
 
   return (
@@ -307,17 +313,15 @@ export default function ContactUsPage() {
                   Follow Us
                 </h3>
                 <div className="space-y-3">
-                  {["Instagram", "LinkedIn", "Facebook", "Behance"].map(
-                    (social) => (
-                      <a
-                        key={social}
-                        href="#"
-                        className="block font-NeueMontreal-Regular text-zinc-300 hover:text-[#cdea68] transition-colors duration-300"
-                      >
-                        {social}
-                      </a>
-                    )
-                  )}
+                  {socials.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.link}
+                      className="block font-NeueMontreal-Regular text-zinc-300 hover:text-[#cdea68] transition-colors duration-300"
+                    >
+                      {social.name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
