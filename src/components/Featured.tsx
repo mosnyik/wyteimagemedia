@@ -2,7 +2,6 @@
 
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import TagButton from "./ui/TagButton";
-// import WaveButton from "./ui/WaveButton";
 import pan1 from "../assets/images/pan/pan1.png";
 import pan2 from "../assets/images/pan/pan2.png";
 import pan3 from "../assets/images/pan/pan3.jpeg";
@@ -107,26 +106,51 @@ function Featured() {
     useAnimation(),
   ];
 
-  useEffect(() => {
-    projects.forEach((project, projectIndex) => {
-      if (project.images.length > 1 && !isPaused[projectIndex]) {
-        intervalRefs.current[projectIndex] = setInterval(() => {
-          setCurrentIndexes((prev) => ({
-            ...prev,
-            [projectIndex]:
-              ((prev[projectIndex] || 0) + 1) % project.images.length,
-          }));
-        }, 3000); // Change image every 3 seconds
-      }
-    });
+   useEffect(() => {
+      const startIntervals = () => {
+        projects.forEach((project, projectIndex) => {
+          if (project.images.length > 1 && !isPaused[projectIndex]) {
+            intervalRefs.current[projectIndex] = window.setInterval(() => {
+              setCurrentIndexes((prev) => ({
+                ...prev,
+                [projectIndex]:
+                  ((prev[projectIndex] || 0) + 1) % project.images.length,
+              }));
+            }, 3000);
+          }
+        });
+      };
+  
+      startIntervals();
+  
+      return () => {
+        Object.values(intervalRefs.current).forEach((interval) => {
+          if (interval) clearInterval(interval);
+        });
+      };
+    }, [isPaused]);
+  
 
-    // Cleanup intervals
-    return () => {
-      Object.values(intervalRefs.current).forEach((interval) => {
-        if (interval) clearInterval(interval);
-      });
-    };
-  }, [isPaused]);
+  // useEffect(() => {
+  //   projects.forEach((project, projectIndex) => {
+  //     if (project.images.length > 1 && !isPaused[projectIndex]) {
+  //       intervalRefs.current[projectIndex] = setInterval(() => {
+  //         setCurrentIndexes((prev) => ({
+  //           ...prev,
+  //           [projectIndex]:
+  //             ((prev[projectIndex] || 0) + 1) % project.images.length,
+  //         }));
+  //       }, 3000); // Change image every 3 seconds
+  //     }
+  //   });
+
+  //   // Cleanup intervals
+  //   return () => {
+  //     Object.values(intervalRefs.current).forEach((interval) => {
+  //       if (interval) clearInterval(interval);
+  //     });
+  //   };
+  // }, [isPaused]);
 
   const handleHover = (index: number) => {
     cards[index].start({ y: "0" });

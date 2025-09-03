@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
@@ -44,35 +43,16 @@ function EditionsTimeline() {
     [key: number]: number;
   }>({});
   const [isPaused, setIsPaused] = useState<{ [key: number]: boolean }>({});
-  const [hoveredEdition, setHoveredEdition] = useState<number | null>(null);
   const intervalRefs = useRef<{ [key: number]: number | null }>({});
 
-  const cards = editions.map(() => useAnimation());
-
-  useEffect(() => {
-    editions.forEach((edition, editionIndex) => {
-      if (edition.images.length > 1 && !isPaused[editionIndex]) {
-        intervalRefs.current[editionIndex] = setInterval(() => {
-          setCurrentIndexes((prev) => ({
-            ...prev,
-            [editionIndex]:
-              ((prev[editionIndex] || 0) + 1) % edition.images.length,
-          }));
-        }, 3000);
-      }
-    });
-
-    return () => {
-      Object.values(intervalRefs.current).forEach((interval) => {
-        if (interval) clearInterval(interval);
-      });
-    };
-  }, [isPaused]);
+  const card1Animation = useAnimation();
+  const card2Animation = useAnimation();
+  const card3Animation = useAnimation();
+  const cards = [card1Animation, card2Animation, card3Animation];
 
   const handleHover = (index: number) => {
     cards[index].start({ y: "0" });
     setIsPaused((prev) => ({ ...prev, [index]: true }));
-    setHoveredEdition(index);
     if (intervalRefs.current[index]) {
       clearInterval(intervalRefs.current[index]);
       intervalRefs.current[index] = null;
@@ -82,7 +62,6 @@ function EditionsTimeline() {
   const handleHoverEnd = (index: number) => {
     cards[index].start({ y: "100%" });
     setIsPaused((prev) => ({ ...prev, [index]: false }));
-    setHoveredEdition(null);
   };
 
   const getCurrentIndex = (editionIndex: number) =>
@@ -95,10 +74,34 @@ function EditionsTimeline() {
     }));
   };
 
+  useEffect(() => {
+    const startIntervals = () => {
+      editions.forEach((edition, editionIndex) => {
+        if (edition.images.length > 1 && !isPaused[editionIndex]) {
+          intervalRefs.current[editionIndex] = window.setInterval(() => {
+            setCurrentIndexes((prev) => ({
+              ...prev,
+              [editionIndex]:
+                ((prev[editionIndex] || 0) + 1) % edition.images.length,
+            }));
+          }, 3000);
+        }
+      });
+    };
+
+    startIntervals();
+
+    return () => {
+      Object.values(intervalRefs.current).forEach((interval) => {
+        if (interval) clearInterval(interval);
+      });
+    };
+  }, [isPaused]);
+
   return (
     <div className="w-full py-20 bg-zinc-900 text-zinc-200">
       <div className="px-6">
-        <h2 className="font-FoundersGroteskXCond-Bold text-3xl lg:text-5xl mb-12">
+        <h2 className="font-bold text-3xl lg:text-5xl mb-12">
           Our Editions Through the Years
         </h2>
       </div>
@@ -108,9 +111,7 @@ function EditionsTimeline() {
           <div key={index} className="mb-16 w-[90vw] md:w-[46vw] lg:w-[47vw]">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-3 h-3 rounded-full bg-zinc-200"></div>
-              <div className="font-NeueMontreal-Regular uppercase">
-                {edition.title}
-              </div>
+              <div className="uppercase">{edition.title}</div>
             </div>
 
             <motion.div
@@ -179,11 +180,11 @@ function EditionsTimeline() {
               </div>
             </motion.div>
 
-            <p className="text-zinc-400 font-NeueMontreal-Regular leading-relaxed mb-3">
+            <p className="text-zinc-400 leading-relaxed mb-3">
               {edition.description}
             </p>
 
-            <div className="flex flex-wrap gap-3  mb-4">
+            <div className="flex flex-wrap gap-3 mb-4">
               {edition.links.map((link, i) => (
                 <span
                   key={i}
@@ -199,7 +200,7 @@ function EditionsTimeline() {
                 href={edition.buyLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#cdea68] text-zinc-900 px-6 py-3 rounded-full font-NeueMontreal-Regular hover:bg-[#b8d654] transition-colors duration-300"
+                className="inline-block bg-[#cdea68] text-zinc-900 px-6 py-3 rounded-full hover:bg-[#b8d654] transition-colors duration-300"
               >
                 Buy This Edition →
               </a>
