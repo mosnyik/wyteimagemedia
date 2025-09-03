@@ -8,6 +8,7 @@ import pm3 from "../assets/images/sbc/sbc4.jpeg";
 import pm4 from "../assets/images/sbc/sbc4.jpeg";
 import pm5 from "../assets/images/sbc/sbc5.jpeg";
 import pm6 from "../assets/images/sbc/sbc6.jpeg";
+import logoImg from "../assets/images/logos/wyte.svg";
 
 const MagazinePurchase = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -97,7 +98,7 @@ const MagazinePurchase = () => {
 
       <div className="relative z-10 px-6 lg:px-14 py-20">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,6 +123,36 @@ const MagazinePurchase = () => {
             exclusive interviews, and insights into the world of excellence and
             achievement.
           </motion.p>
+        </div> */}
+
+        <div className="mb-20">
+          <div
+            className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
+            style={{
+              backgroundImage: `url(${logoImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+            <div className="flex-1 relative md:bottom-4/5 lg:bottom-1/2 z-10 flex flex-col justify-center lg:justify-end">
+              <h1 className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-2 sm:mb-6 leading-none text-white drop-shadow-2xl">
+                Profile
+              </h1>
+              <h1 className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-6 sm:mb-8 leading-none text-gold drop-shadow-2xl">
+                Magazine
+              </h1>
+            </div>
+            <div className="lg:max-w-md relative z-10">
+              <p className="font-NeueMontreal-Regular text-lg lg:text-xl text-white drop-shadow-md">
+                Discover the stories behind the Golden Heart Awards winners,
+                exclusive interviews, and insights into the world of excellence
+                and achievement.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Magazine Showcase */}
