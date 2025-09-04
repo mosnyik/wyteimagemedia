@@ -8,10 +8,10 @@ import pm3 from "../assets/images/sbc/sbc4.jpeg";
 import pm4 from "../assets/images/sbc/sbc4.jpeg";
 import pm5 from "../assets/images/sbc/sbc5.jpeg";
 import pm6 from "../assets/images/sbc/sbc6.jpeg";
-import logoImg from "../assets/images/logos/wyte.svg";
+import pmBgImg from "../assets/images/pm/pm1.jpg";
+import pmBookBgImg from "../assets/images/pm/pm2.jpg";
 
 const MagazinePurchase = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -98,55 +98,41 @@ const MagazinePurchase = () => {
 
       <div className="relative z-10 px-6 lg:px-14 py-20">
         {/* Header Section */}
-        {/* <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="font-FoundersGroteskXCond-Bold text-6xl md:text-8xl lg:text-9xl uppercase text-white mb-4">
-              Profile
-            </h1>
-            <h2 className="font-FoundersGroteskXCond-Bold text-4xl md:text-6xl lg:text-7xl uppercase text-[#cdea68]">
-              Magazine
-            </h2>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-zinc-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
-          >
-            Discover the stories behind the Golden Heart Awards winners,
-            exclusive interviews, and insights into the world of excellence and
-            achievement.
-          </motion.p>
-        </div> */}
-
         <div className="mb-20">
           <div
-            className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
+            className="relative flex flex-col items-center justify-center text-center 
+               rounded-2xl overflow-hidden p-6 sm:p-8 lg:p-12 
+               h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
-              backgroundImage: `url(${logoImg})`,
+              backgroundImage: `url(${pmBgImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
 
-            <div className="flex-1 relative md:bottom-4/5 lg:bottom-1/2 z-10 flex flex-col justify-center lg:justify-end">
-              <h1 className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-2 sm:mb-6 leading-none text-white drop-shadow-2xl">
+            {/* Centered Content */}
+            <div className="relative z-10 max-w-3xl flex flex-col items-center justify-center">
+              <h1
+                className="font-FoundersGroteskXCond-Bold 
+                     text-4xl sm:text-6xl md:text-7xl lg:text-9xl 
+                     uppercase leading-none text-white drop-shadow-2xl mb-4"
+              >
                 Profile
               </h1>
-              <h1 className="font-FoundersGroteskXCond-Bold text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-6 sm:mb-8 leading-none text-gold drop-shadow-2xl">
+              <h1
+                className="font-FoundersGroteskXCond-Bold 
+                     text-4xl sm:text-6xl md:text-7xl lg:text-9xl 
+                     uppercase leading-none text-gold drop-shadow-2xl mb-8"
+              >
                 Magazine
               </h1>
-            </div>
-            <div className="lg:max-w-md relative z-10">
-              <p className="font-NeueMontreal-Regular text-lg lg:text-xl text-white drop-shadow-md">
+              <p
+                className="font-NeueMontreal-Regular text-lg sm:text-xl lg:text-2xl 
+                    text-white drop-shadow-md leading-relaxed"
+              >
                 Discover the stories behind the Golden Heart Awards winners,
                 exclusive interviews, and insights into the world of excellence
                 and achievement.
@@ -279,66 +265,47 @@ const MagazinePurchase = () => {
         {/* Magazine Showcase */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 mb-20">
           {/* Magazine Cover */}
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            className="flex-1 flex justify-center"
+          <div
+            className="relative z-10 w-80 h-96 md:w-96 md:h-[480px] 
+             rounded-2xl border border-zinc-600 
+             overflow-hidden shadow-2xl 
+             transition-all duration-500 
+             group hover:border-[#cdea68]"
+            style={{
+              backgroundImage: `url(${pmBookBgImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
           >
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileInView={{ opacity: 0 }} // clears when in view on mobile
+              transition={{ duration: 0.8 }}
+              className={`absolute inset-0 bg-black/40 lg:opacity-100 lg:group-hover:opacity-0 transition-opacity duration-500`}
+            ></motion.div>
+
+            {/* Gradient overlay (optional) */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#cdea68]/20 to-transparent"></div>
+
+            {/* Hover overlay */}
             <div
-              className="relative group cursor-pointer"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <div className="magazine-float">
-                <div className="relative w-80 h-96 md:w-96 md:h-[480px] bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-2xl shadow-2xl overflow-hidden border border-zinc-600 group-hover:border-[#cdea68] transition-all duration-500">
-                  {/* Magazine Cover Content */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#cdea68]/20 to-transparent"></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-white font-FoundersGroteskXCond-Bold text-2xl md:text-3xl uppercase mb-2">
-                        Profile
-                      </h3>
-                      <p className="text-[#cdea68] text-sm uppercase tracking-wider">
-                        International Magazine
-                      </p>
-                    </div>
+              className={`absolute inset-0 bg-[#cdea68]/10 transition-opacity duration-500`}
+            ></div>
 
-                    <div className="text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 bg-[#cdea68]/20 rounded-full flex items-center justify-center">
-                        <div className="w-20 h-20 bg-[#cdea68] rounded-full flex items-center justify-center">
-                          <span className="text-zinc-900 font-bold text-xl">
-                            P
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-zinc-300 text-sm">
-                        Excellence • Achievement • Recognition
-                      </p>
-                    </div>
+            {/* Floating elements (kept inside, so clipped by border radius) */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#cdea68] rounded-full opacity-80 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#cdea68] rounded-full opacity-60 animate-pulse delay-1000"></div>
 
-                    <div>
-                      <p className="text-white font-semibold text-lg mb-1">
-                        Issue #1
-                      </p>
-                      <p className="text-zinc-400 text-sm">2024 Edition</p>
-                    </div>
-                  </div>
-
-                  {/* Hover Effect Overlay */}
-                  <div
-                    className={`absolute inset-0 bg-[#cdea68]/10 transition-opacity duration-500 ${
-                      isHovered ? "opacity-100" : "opacity-0"
-                    }`}
-                  ></div>
-                </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#cdea68] rounded-full opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#cdea68] rounded-full opacity-60 animate-pulse delay-1000"></div>
-            </div>
-          </motion.div>
+            {/* Motion content */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="relative z-10 flex-1 flex justify-center"
+            ></motion.div>
+          </div>
 
           {/* Content & CTA */}
           <motion.div
