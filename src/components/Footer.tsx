@@ -17,7 +17,7 @@ const addresses = [
 
 const navLinks = [
   { name: "Profile Magazine", path: "/profile-magazine" },
-  { name: "Services", path: "/services" },
+  { name: "Services", path: "/services"},
   { name: "Events", path: "/events" },
   { name: "About us", path: "/about-us" },
   { name: "Contact us", path: "/contact-us" },
@@ -51,7 +51,7 @@ function Footer() {
                   {navLinks.map((item, index) => (
                     <li key={index}>
                       <NavLink
-                        to={item.path}
+                        to={(item.path)}
                         className={({ isActive }) =>
                           ` after:bg-zinc-200" ${
                             isActive
@@ -107,6 +107,7 @@ function Footer() {
                       <a
                         className="link-underline after:bg-zinc-200"
                         href={item.link}
+                         target="_blank"
                       >
                         {item.name}
                       </a>

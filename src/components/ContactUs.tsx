@@ -299,10 +299,10 @@ export default function ContactUsPage() {
                   <button
                     type="submit"
                     className={`w-full bg-gold text-zinc-900 py-4 rounded-lg font-NeueMontreal-Regular font-medium hover:bg-[#b8d654] transition-colors duration-300 
-                      ${sending?"cursor-not-allowed opacity-70":""}`}
+                      ${sending ? "cursor-not-allowed opacity-70" : ""}`}
                     disabled={sending}
                   >
-                    {sending ?" Sending...":"Send Message"}
+                    {sending ? " Sending..." : "Send Message"}
                   </button>
                 </form>
               </div>
@@ -351,6 +351,7 @@ export default function ContactUsPage() {
                     <a
                       key={index}
                       href={social.link}
+                      target="_blank"
                       className="block font-NeueMontreal-Regular text-zinc-300 hover:text-gold transition-colors duration-300"
                     >
                       {social.name}
