@@ -60,10 +60,35 @@ import sbc14 from "../assets/images/sbc/sbc14.jpeg";
 export default function EventsPage() {
   const upcomingEvents = [
     {
-      title: "Profile Awards Nigeria 2024",
-      date: "November 16, 2024",
+      title: "Profile Awards Nigeria 2025",
+      date: "September 7, 2025",
       time: "7:00 PM - 11:00 PM",
-      location: "Abuja, Nigeria",
+      location: "Leeds, United Kingdom",
+      description:
+        "The flagship recognition platform celebrating outstanding personalities who have contributed to leadership, philanthropy, and industry.",
+      category: "Awards",
+      status: "Registration Open",
+      images: [
+        pan1,
+        pan2,
+        pan3,
+        pan4,
+        pan5,
+        pan6,
+        pan7,
+        pan8,
+        pan9,
+        pan10,
+        pan11,
+        pan12,
+      ],
+      // featured: true,
+    },
+    {
+      title: "Profile Awards Nigeria 2025",
+      date: "September 7, 2025",
+      time: "7:00 PM - 11:00 PM",
+      location: "Leeds, United Kingdom",
       description:
         "The flagship recognition platform celebrating outstanding personalities who have contributed to leadership, philanthropy, and industry.",
       category: "Awards",
@@ -115,6 +140,31 @@ export default function EventsPage() {
         qnn16,
       ],
       featured: false,
+    },
+    {
+      title: "Profile Awards Nigeria 2024",
+      date: "November 16, 2024",
+      time: "7:00 PM - 11:00 PM",
+      location: "Abuja, Nigeria",
+      description:
+        "The flagship recognition platform celebrating outstanding personalities who have contributed to leadership, philanthropy, and industry.",
+      category: "Awards",
+      status: "Registration Open",
+      images: [
+        pan1,
+        pan2,
+        pan3,
+        pan4,
+        pan5,
+        pan6,
+        pan7,
+        pan8,
+        pan9,
+        pan10,
+        pan11,
+        pan12,
+      ],
+      featured: true,
     },
     {
       title: "Golden Heart Awards 2023",
@@ -248,7 +298,7 @@ export default function EventsPage() {
                                 key={`${event.title}-${imgIndex}`}
                                 src={event.images[imgIndex]}
                                 alt={event.title}
-                                className="w-full h-80 object-cover rounded-xl"
+                                className="w-full h-80 object-cover object-top rounded-xl"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -328,7 +378,7 @@ export default function EventsPage() {
                             key={`${event.title}-${imgIndex}`}
                             src={event.images[imgIndex]}
                             alt={event.title}
-                            className="w-full h-72 object-cover rounded-xl"
+                            className="w-full h-72 object-cover  object-top  rounded-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -375,7 +425,7 @@ export default function EventsPage() {
                           key={`${event.title}-${imgIndex}`}
                           src={event.images[imgIndex]}
                           alt={event.title}
-                          className="w-full h-60 object-cover rounded-xl"
+                          className="w-full h-80 object-cover  object-top  rounded-xl"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}

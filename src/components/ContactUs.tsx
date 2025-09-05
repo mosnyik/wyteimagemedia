@@ -6,6 +6,8 @@ import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import logoImg from "../assets/images/logos/wyte.svg";
+import emailjs from "emailjs-com";
+import { toast } from "sonner";
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -16,6 +18,7 @@ export default function ContactUsPage() {
     service: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -33,6 +36,35 @@ export default function ContactUsPage() {
     e.preventDefault();
     // Handle form submission here
     console.log("Form submitted:", formData);
+    // toast.success("Message sent successfully!");
+    setSending(true);
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          toast.success("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+          setSending(false);
+        },
+        (error) => {
+          console.error("Email error:", error.text);
+          toast.error("Something went wrong, please try again.");
+          setSending(false);
+        }
+      );
   };
 
   const contactInfo = [
@@ -217,7 +249,7 @@ export default function ContactUsPage() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-[#cdea68] transition-colors duration-300"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+447 123 4567"
                       />
                     </div>
                   </div>
@@ -266,9 +298,11 @@ export default function ContactUsPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#cdea68] text-zinc-900 py-4 rounded-lg font-NeueMontreal-Regular font-medium hover:bg-[#b8d654] transition-colors duration-300"
+                    className={`w-full bg-gold text-zinc-900 py-4 rounded-lg font-NeueMontreal-Regular font-medium hover:bg-[#b8d654] transition-colors duration-300 
+                      ${sending?"cursor-not-allowed opacity-70":""}`}
+                    disabled={sending}
                   >
-                    Send Message
+                    {sending ?" Sending...":"Send Message"}
                   </button>
                 </form>
               </div>
@@ -291,7 +325,7 @@ export default function ContactUsPage() {
                     <div>
                       <a
                         href={`tel:${info.phone}`}
-                        className="hover:text-[#cdea68] transition-colors duration-300"
+                        className="hover:text-gold transition-colors duration-300"
                       >
                         {info.phone}
                       </a>
@@ -299,7 +333,7 @@ export default function ContactUsPage() {
                     <div>
                       <a
                         href={`mailto:${info.email}`}
-                        className="hover:text-[#cdea68] transition-colors duration-300"
+                        className="hover:text-gold transition-colors duration-300"
                       >
                         {info.email}
                       </a>
@@ -317,7 +351,7 @@ export default function ContactUsPage() {
                     <a
                       key={index}
                       href={social.link}
-                      className="block font-NeueMontreal-Regular text-zinc-300 hover:text-[#cdea68] transition-colors duration-300"
+                      className="block font-NeueMontreal-Regular text-zinc-300 hover:text-gold transition-colors duration-300"
                     >
                       {social.name}
                     </a>
@@ -335,7 +369,7 @@ export default function ContactUsPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-zinc-800 rounded-xl p-6 lg:p-8">
-                  <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-4 text-[#cdea68]">
+                  <h3 className="font-FoundersGroteskXCond-Bold text-xl mb-4 text-gold">
                     {faq.question}
                   </h3>
                   <p className="font-NeueMontreal-Regular text-zinc-300 leading-relaxed">
@@ -347,7 +381,7 @@ export default function ContactUsPage() {
           </div>
 
           {/* Response Time */}
-          <div className="bg-gradient-to-r from-[#004d43] to-[#cdea68] rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#004d43] to-gold rounded-2xl p-1">
             <div className="bg-zinc-900 rounded-2xl p-8 lg:p-12 text-center">
               <h2 className="font-FoundersGroteskXCond-Bold text-3xl lg:text-5xl mb-6">
                 Quick Response Guarantee
@@ -359,7 +393,7 @@ export default function ContactUsPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-[#cdea68] mb-2">
+                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-gold mb-2">
                     24hrs
                   </div>
                   <div className="font-NeueMontreal-Regular text-zinc-300">
@@ -367,7 +401,7 @@ export default function ContactUsPage() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-[#cdea68] mb-2">
+                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-gold mb-2">
                     48hrs
                   </div>
                   <div className="font-NeueMontreal-Regular text-zinc-300">
@@ -375,7 +409,7 @@ export default function ContactUsPage() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-[#cdea68] mb-2">
+                  <div className="font-FoundersGroteskXCond-Bold text-3xl text-gold mb-2">
                     7 days
                   </div>
                   <div className="font-NeueMontreal-Regular text-zinc-300">
