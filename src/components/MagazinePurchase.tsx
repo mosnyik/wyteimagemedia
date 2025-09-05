@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import pm1 from "../assets/images/sbc/sbc5.jpeg";
-import pm2 from "../assets/images/sbc/sbc5.jpeg";
-import pm3 from "../assets/images/sbc/sbc4.jpeg";
-import pm4 from "../assets/images/sbc/sbc4.jpeg";
-import pm5 from "../assets/images/sbc/sbc5.jpeg";
-import pm6 from "../assets/images/sbc/sbc6.jpeg";
+import pm1 from "../assets/images/pm/pm3.jpg";
+import pm2 from "../assets/images/pm/pm4.jpg";
+import pm3 from "../assets/images/pm/pm5.jpg";
+import pm4 from "../assets/images/pm/pm6.jpg";
+import pm5 from "../assets/images/pm/pm7.jpg";
+import pm6 from "../assets/images/pm/pm8.jpg";
 import pmBgImg from "../assets/images/pm/pm1.jpg";
 import pmBookBgImg from "../assets/images/pm/pm2.jpg";
 
@@ -18,47 +18,62 @@ const MagazinePurchase = () => {
   const magazinePages = [
     {
       id: 1,
-      title: "Cover Story",
-      description: "Meet the Golden Heart Award Winners",
-      content: "Exclusive interviews with this year's most inspiring achievers",
+      title: "Table of Content",
+      description:
+        "An overview of the 9th Edition of Profile Africa Magazine, highlighting inspiring stories, exclusive interviews, and political insights.",
+      content:
+        "This edition features the untold story of Abigail Marshall Katung, an interactive session with Mrs. Stella Faith Erhabor, insights into the realities of living in the diaspora, and profiles of influential leaders including Senator Patrick Abba Moro, Rev. Godfrey Osemwegie, and Nigeria's most impactful governor of 2025.",
+      pageNo: 5,
       image: pm1,
     },
     {
       id: 2,
-      title: "Behind the Scenes",
-      description: "Awards Ceremony Highlights",
-      content: "Capturing the magic moments of recognition and celebration",
+      title: "Good Leadership: Unlocking Africa’s Beauty",
+      description:
+        "An insightful exploration of how visionary leadership can transform Africa’s vast potential into tangible progress.",
+      content:
+        "This feature examines the paradox of Africa’s immense resources and persistent challenges, arguing that selfless, strategic, and inclusive leadership is the key to unlocking the continent’s true beauty and future.",
+      pageNo: 9,
       image: pm2,
     },
     {
       id: 3,
-      title: "Success Stories",
-      description: "Profiles of Excellence",
-      content: "In-depth features on leaders who are changing the world",
+      title: "The Realities of Living in the Diaspora",
+      description:
+        "A candid look into the challenges and triumphs of Nigerians abroad, revealing what life truly feels like beyond the glossy pictures.",
+      content:
+        "This feature explores the struggles, sacrifices, and resilience of Nigerians in the diaspora, from navigating cultural differences and economic hurdles to redefining success and identity while away from home.",
+      pageNo: 10,
       image: pm3,
     },
     {
       id: 4,
-      title: "Industry Insights",
-      description: "Trends & Innovation",
+      title: "The Untold Story of Abigail Marshall Katung",
+      description:
+        "From Zaria to Leeds City Hall, discover the inspiring journey of the first African Lord Mayor of Leeds.",
       content:
-        "Expert analysis on emerging trends and breakthrough innovations",
+        "This feature highlights Abigail Marshall Katung’s historic rise as the 130th Lord Mayor of Leeds, exploring her resilience, leadership, and the power of representation for women, Africans, and dreamers around the world.",
+      pageNo: 13,
       image: pm4,
     },
     {
       id: 5,
-      title: "Global Impact",
-      description: "Making a Difference",
+      title: "Top Five Longest Serving African Presidents",
+      description:
+        "An eye-opening look at Africa's longest-serving leaders and their decades in power.",
       content:
-        "Stories of individuals and organizations creating positive change",
+        "This feature highlights the top five African presidents who have held onto power the longest as of 2025, examining their rise, tenure, controversies, and the impact of their extended rule on governance and development.",
+      pageNo: 21,
       image: pm5,
     },
     {
       id: 6,
-      title: "Future Vision",
-      description: "What's Next",
+      title: "Top Five Africa Most Developed Cities 2025",
+      description:
+        "A showcase of Africa's most advanced cities, highlighting their infrastructure, innovation, and global competitiveness.",
       content:
-        "Looking ahead to the next generation of excellence and achievement",
+        "This feature ranks and explores the top five most developed cities in Africa as of 2025, examining their economic strength, urban growth, quality of life, and the factors driving their development on the global stage.",
+      pageNo: 33,
       image: pm6,
     },
   ];
@@ -188,7 +203,7 @@ const MagazinePurchase = () => {
                       {/* Page Content */}
                       <div className="flex-1 text-center md:text-left">
                         <span className="text-[#cdea68] text-sm uppercase tracking-wider font-semibold">
-                          Page {page.id}
+                          Page {page.pageNo}
                         </span>
                         <h4 className="font-FoundersGroteskXCond-Bold text-3xl md:text-4xl text-white mb-3 uppercase">
                           {page.title}

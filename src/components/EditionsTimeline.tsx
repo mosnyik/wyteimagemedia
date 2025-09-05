@@ -3,19 +3,19 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 // Import your edition images
-import edition9a from "../assets/images/gha/gha1.png";
-import edition9b from "../assets/images/gha/gha2.jpeg";
-import edition9c from "../assets/images/gha/gha3.jpeg";
-// import edition9a from "../assets/images/edit3ions/edition9a.jpg";
-// import edition9b from "../assets/images/editions/edition9b.jpg";
-// import edition9c from "../assets/images/editions/edition9c.jpg";
+import edition9a from "../assets/images/pm/pm3.jpg";
+import edition9b from "../assets/images/pm/pm4.jpg";
+import edition9c from "../assets/images/pm/pm5.jpg";
+import edition9d from "../assets/images/pm/pm6.jpg";
+import edition9e from "../assets/images/pm/pm7.jpg";
+import edition9f from "../assets/images/pm/pm8.jpg";
 
 const editions = [
   {
     title: "9th Edition – Leeds, UK (2024)",
     description:
       "The 9th edition, unveiled in Leeds, United Kingdom, marked the international expansion of Profile Africa Magazine. This milestone featured inspiring African leaders, philanthropists, and entrepreneurs celebrated on a global stage.",
-    images: [edition9a, edition9b, edition9c],
+    images: [edition9a, edition9b, edition9c, edition9d, edition9e, edition9f],
     links: [
       { title: "International Launch", to: "" },
       { title: "Leadership & Excellence", to: "" },
