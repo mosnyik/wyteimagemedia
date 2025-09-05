@@ -2,7 +2,6 @@
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
-// Import your edition images
 import edition9a from "../assets/images/pm/pm3.jpg";
 import edition9b from "../assets/images/pm/pm4.jpg";
 import edition9c from "../assets/images/pm/pm5.jpg";
