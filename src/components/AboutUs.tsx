@@ -6,7 +6,7 @@ import FestusImage from "../assets/images/team/festus.png";
 // import OperationsImage from "../assets/images/team/festus.png";
 // import InternationalImage from "../assets/images/team/festus.png";
 import AboutUsImg from "../assets/images/pages/about-us.jpg";
-import logoImg from "../assets/images/logos/wyte.svg";
+import logoImg from "../assets/images/pages/about-section1.jpg";
 
 
 export default function AboutUsPage() {
