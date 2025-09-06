@@ -78,7 +78,7 @@ function Navbar() {
           <NavLink to={"/"} onClick={() => setIsNavOpen(false)}>
             <h3>
               <svg
-                className={`${isNavOpen && "invert"} overflow-hidden`}
+                className={`overflow-hidden`}
                 width="72"
                 height="30"
                 viewBox="0 0 72 30"
@@ -197,7 +197,7 @@ function Navbar() {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `underline-animation font-FoundersGroteskXCond-Bold leading-[.75px] text-4xl md:text-7xl lg:text-8xl block ${
+                      `font-FoundersGroteskXCond-Bold leading-[.75px] text-4xl md:text-7xl lg:text-8xl block ${
                         isActive ? "text-gold" : "text-black"
                       }`
                     }

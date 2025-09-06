@@ -40,7 +40,7 @@ export default {
         custom: "cubic-bezier(.215,.61,.355,1)",
       },
       colors: {
-        gold: "#CCAF08FF",
+        gold: "#B39803FF",
         "gold-dark": "#b8860b",
         "gold-light": "#ffed4e",
         "green-accent": "#cdea68",
