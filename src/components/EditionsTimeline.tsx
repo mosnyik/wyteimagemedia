@@ -122,7 +122,7 @@ function EditionsTimeline() {
                 className="w-full max-w-md mx-auto"
                 // className="overflow-hidden h-96 rounded-xl w-full relative"
               >
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="sync">
                   <motion.img
                     key={`${index}-${getCurrentIndex(index)}`}
                     src={edition.images[getCurrentIndex(index)]}
