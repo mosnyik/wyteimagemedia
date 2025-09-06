@@ -118,13 +118,16 @@ function EditionsTimeline() {
               onHoverEnd={() => handleHoverEnd(index)}
               className="group relative mb-4"
             >
-              <div className="overflow-hidden h-96 rounded-xl w-full relative">
+              <div
+                className="w-full max-w-md mx-auto"
+                // className="overflow-hidden h-96 rounded-xl w-full relative"
+              >
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={`${index}-${getCurrentIndex(index)}`}
                     src={edition.images[getCurrentIndex(index)]}
                     alt={`${edition.title} image`}
-                    className="rounded-xl w-full h-96 object-cover object-top group-hover:scale-110 transition-all duration-1000"
+                    className="rounded-xl w-full h-auto object-cover object-top group-hover:scale-110 border border-zinc-600 hover:border-[#cdea68] transition-all duration-1000"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

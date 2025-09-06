@@ -194,7 +194,7 @@ const MagazinePurchase = () => {
                         <div className="w-full max-w-md mx-auto">
                           <img
                             src={page.image || "/placeholder.svg"}
-                            alt={`Magazine page ${page.id}: ${page.title}`}
+                            alt={`Magazine page ${page.pageNo}: ${page.title}`}
                             className="w-full h-auto rounded-xl shadow-2xl border border-zinc-600 hover:border-[#cdea68] transition-all duration-300"
                           />
                         </div>
@@ -224,7 +224,7 @@ const MagazinePurchase = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevPage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#cdea68] text-zinc-900 rounded-full flex items-center justify-center hover:bg-[#b8d455] transition-all duration-300 shadow-lg hover:shadow-xl z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-transparent md:bg-[#cdea68] text-zinc-900 rounded-full flex items-center justify-center hover:bg-[#b8d455] transition-all duration-300 shadow-lg hover:shadow-xl z-10"
             >
               <svg
                 className="w-6 h-6"
@@ -243,7 +243,7 @@ const MagazinePurchase = () => {
 
             <button
               onClick={nextPage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#cdea68] text-zinc-900 rounded-full flex items-center justify-center hover:bg-[#b8d455] transition-all duration-300 shadow-lg hover:shadow-xl z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-transparent md:bg-[#cdea68] text-zinc-900 rounded-full flex items-center justify-center hover:bg-[#b8d455] transition-all duration-300 shadow-lg hover:shadow-xl z-10"
             >
               <svg
                 className="w-6 h-6"
