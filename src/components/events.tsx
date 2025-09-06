@@ -1,6 +1,9 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import eventsImg from "../assets/images/pages/events.jpg";
+import eventsImgMobile from "../assets/images/pages/events.jpg";
+import eventsImgTablet from "../assets/images/pages/events.jpg";
+import eventsImgDesktop from "../assets/images/pages/events.jpg";
+import eventsImgWide from "../assets/images/pages/events.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
@@ -56,6 +59,7 @@ import sbc11 from "../assets/images/sbc/sbc11.jpeg";
 import sbc12 from "../assets/images/sbc/sbc12.jpeg";
 import sbc13 from "../assets/images/sbc/sbc13.jpeg";
 import sbc14 from "../assets/images/sbc/sbc14.jpeg";
+import HeroSection from "./HeroSection";
 
 export default function EventsPage() {
   const upcomingEvents = [
@@ -231,7 +235,7 @@ export default function EventsPage() {
       <div className="px-6 lg:px-14 pt-32 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <div
               className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
               style={{
@@ -259,7 +263,20 @@ export default function EventsPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
+          <HeroSection
+            title="Our"
+            highlight="Events"
+            text="Join us at our signature events — from Profile Awards Nigeria
+                  to the Golden Heart Awards — where leaders, innovators, and
+                  visionaries come together to inspire and celebrate excellence."
+            images={{
+              mobile: eventsImgMobile,
+              tablet: eventsImgTablet,
+              desktop: eventsImgDesktop,
+              wide: eventsImgWide,
+            }}
+          />
 
           {/* Featured Event */}
           <div className="mb-20">

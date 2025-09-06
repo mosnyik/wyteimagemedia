@@ -1,7 +1,11 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import profileMagazineImg from "../assets/images/pm/pm2.jpg";
+import profileMagazineImgMobile from "../assets/images/pm/pm2.jpg";
+import profileMagazineImgTablet from "../assets/images/pm/pm2.jpg";
+import profileMagazineImgDesktop from "../assets/images/pm/pm1.jpg";
+import profileMagazineImgWide from "../assets/images/pm/pm1.jpg";
 import EditionsTimeline from "./EditionsTimeline";
+import HeroSection from "./HeroSection";
 
 export default function ProfileMagazinePage() {
   return (
@@ -11,7 +15,8 @@ export default function ProfileMagazinePage() {
       <div className="px-6 lg:px-14 pt-32">
         <div className="max-w-7xl mx-auto">
           <div className="">
-            <div
+            {/* Hero */}
+            {/* <div
               className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-4 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
               style={{
                 backgroundImage: `url(${profileMagazineImg})`,
@@ -49,7 +54,21 @@ export default function ProfileMagazinePage() {
                   celebrating the achievements of great African men and women.
                 </p>
               </div>
-            </div>
+            </div> */}
+            <HeroSection
+              title="Our"
+              highlight="Services"
+              text="Profile Africa Magazine showcases outstanding personalities
+                  who give back to society, promoting hard work, excellence, and
+                  celebrating the achievements of great African men and women.
+                "
+              images={{
+                mobile: profileMagazineImgMobile,
+                tablet: profileMagazineImgTablet,
+                desktop: profileMagazineImgDesktop,
+                wide: profileMagazineImgWide,
+              }}
+            />
 
             {/* About Section */}
             <div className="mt-16">

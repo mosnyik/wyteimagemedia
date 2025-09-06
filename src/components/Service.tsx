@@ -1,7 +1,11 @@
 
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import servicesImg from "../assets/images/pages/services.jpg";
+import servicesImgMobile from "../assets/images/pages/services.jpg";
+import servicesImgTablet from "../assets/images/pages/services.jpg";
+import servicesImgDesktop from "../assets/images/pages/services.jpg";
+import servicesImgWide from "../assets/images/pages/services.jpg";
+import HeroSection from "./HeroSection";
 
 export default function ServicesPage() {
   const services = [
@@ -141,7 +145,7 @@ export default function ServicesPage() {
       <div className="px-6 lg:px-14 pt-32 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero */}
-          <div
+          {/* <div
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${servicesImg})`,
@@ -179,7 +183,21 @@ export default function ServicesPage() {
                 inspiration through creative event production.
               </p>
             </div>
-          </div>
+          </div> */}
+
+          <HeroSection
+            title="Our"
+            highlight="Services"
+            text="We are an event management company providing comprehensive
+                solutions from concept through execution, creating global
+                inspiration through creative event production."
+            images={{
+              mobile:  servicesImgMobile,
+              tablet:  servicesImgTablet,
+              desktop: servicesImgDesktop,
+              wide:    servicesImgWide,
+            }}
+          />
 
           {/* Who We Are */}
           <div className="mt-16 mb-20 text-center max-w-3xl mx-auto">

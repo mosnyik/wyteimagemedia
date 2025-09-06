@@ -5,9 +5,12 @@ import FestusImage from "../assets/images/team/festus.png";
 // import CreativeImage from "../assets/images/team/festus.png";
 // import OperationsImage from "../assets/images/team/festus.png";
 // import InternationalImage from "../assets/images/team/festus.png";
-import AboutUsImg from "../assets/images/pages/about-us.jpg";
+import AboutUsImgWide from "../assets/images/pages/about-us.jpg";
+import AboutUsImgDesktop from "../assets/images/pages/about-us.jpg";
+import AboutUsImgTablet from "../assets/images/pages/about-us.jpg";
+import AboutUsImgMobile from "../assets/images/pages/about-us.jpg";
 import logoImg from "../assets/images/pages/about-section1.jpg";
-
+import HeroSection from "./HeroSection";
 
 export default function AboutUsPage() {
   const teamMembers = [
@@ -117,7 +120,7 @@ export default function AboutUsPage() {
       <div className="px-6 lg:px-14 pt-32 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div
+          {/* <div
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${AboutUsImg})`,
@@ -155,7 +158,20 @@ export default function AboutUsPage() {
                 event production.
               </p>
             </div>
-          </div>
+          </div> */}
+          <HeroSection
+            title="About"
+            highlight="Us"
+            text="Wyte Image Media is an event organization known for classic and
+                impactful events, inspiring global audiences through creative
+                event production."
+            images={{
+              mobile: AboutUsImgMobile,
+              tablet: AboutUsImgTablet,
+              desktop: AboutUsImgDesktop,
+              wide: AboutUsImgWide,
+            }}
+          />
 
           {/* Mission Statement */}
           <div className="mb-24">

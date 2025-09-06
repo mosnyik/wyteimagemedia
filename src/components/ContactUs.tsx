@@ -5,9 +5,13 @@ import type React from "react";
 import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import contactUsImg from "../assets/images/pages/contact-us.jpg";
+import contactUsImgMobile from "../assets/images/pages/contact-us.jpg";
+import contactUsImgTablet from "../assets/images/pages/contact-us.jpg";
+import contactUsImgDesktop from"../assets/images/pages/contact-us.jpg";
+import contactUsImgWide from   "../assets/images/pages/contact-us.jpg";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
+import HeroSection from "./HeroSection";
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -130,7 +134,7 @@ export default function ContactUsPage() {
       <div className="px-6 lg:px-14 pt-32 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div
+          {/* <div
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${contactUsImg})`,
@@ -167,8 +171,19 @@ export default function ContactUsPage() {
                 vision and explore how we can bring it to life together.
               </p>
             </div>
-          </div>
+          </div> */}
 
+          <HeroSection
+            title="Contact"
+            highlight="Us"
+            text="Ready to create something extraordinary? Let's discuss your vision and explore how we can bring it to life together."
+            images={{
+              mobile: contactUsImgMobile,
+              tablet: contactUsImgTablet,
+              desktop: contactUsImgDesktop,
+              wide: contactUsImgWide,
+            }}
+          />
           {/* Contact Form and Info */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-24">
             {/* Contact Form */}
