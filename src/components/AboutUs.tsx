@@ -2,9 +2,10 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 // import AboutImage from "../assets/images/NGHA-women.jpeg";
 import FestusImage from "../assets/images/team/festus.png";
-import CreativeImage from "../assets/images/team/festus.png";
-import OperationsImage from "../assets/images/team/festus.png";
-import InternationalImage from "../assets/images/team/festus.png";
+// import CreativeImage from "../assets/images/team/festus.png";
+// import OperationsImage from "../assets/images/team/festus.png";
+// import InternationalImage from "../assets/images/team/festus.png";
+import AboutUsImg from "../assets/images/logos/wyte.svg";
 import logoImg from "../assets/images/logos/wyte.svg";
 
 
@@ -16,24 +17,24 @@ export default function AboutUsPage() {
       bio: "Visionary leader who founded Wyte Image Media in 2012 with Profile Awards Nigeria, inspiring global audiences through creative event production.",
       image: FestusImage,
     },
-    {
-      name: "Creative Team",
-      position: "Event Production",
-      bio: "Award-winning team specializing in event management, brand development and creative storytelling.",
-      image: CreativeImage,
-    },
-    {
-      name: "Operations Team",
-      position: "Event Coordination",
-      bio: "Expert team in project management and client relations with a passion for excellence in event execution.",
-      image: OperationsImage,
-    },
-    {
-      name: "International Team",
-      position: "Global Operations",
-      bio: "International team managing operations across Nigeria, UK and global markets for seamless event delivery.",
-      image: InternationalImage,
-    },
+    // {
+    //   name: "Creative Team",
+    //   position: "Event Production",
+    //   bio: "Award-winning team specializing in event management, brand development and creative storytelling.",
+    //   image: CreativeImage,
+    // },
+    // {
+    //   name: "Operations Team",
+    //   position: "Event Coordination",
+    //   bio: "Expert team in project management and client relations with a passion for excellence in event execution.",
+    //   image: OperationsImage,
+    // },
+    // {
+    //   name: "International Team",
+    //   position: "Global Operations",
+    //   bio: "International team managing operations across Nigeria, UK and global markets for seamless event delivery.",
+    //   image: InternationalImage,
+    // },
   ];
 
   const values = [
@@ -119,8 +120,8 @@ export default function AboutUsPage() {
           <div
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
-              backgroundImage: `url(${logoImg})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${AboutUsImg})`,
+              backgroundSize: "fit-cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
@@ -219,8 +220,18 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-gold to-[#004d43] rounded-2xl h-96 flex items-center justify-center">
+              {/* <div className="bg-gradient-to-br from-gold to-[#004d43] rounded-2xl h-96 flex items-center justify-center">
                 <div className="text-6xl">🏆</div>
+               
+              </div> */}
+              <div className="flex-1">
+                <div className="w-full max-w-md mx-auto">
+                  <img
+                    src={logoImg || "/placeholder.svg"}
+                    alt={`about us image`}
+                    className="w-full h-auto rounded-xl shadow-2xl border border-zinc-600 hover:border-[#cdea68] transition-all duration-300"
+                  />
+                </div>
               </div>
             </div>
           </div>
