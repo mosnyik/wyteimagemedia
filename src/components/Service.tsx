@@ -1,7 +1,7 @@
 
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import servicesImg from "../assets/images/logos/wyte.svg";
+import servicesImg from "../assets/images/pages/services.jpg";
 
 export default function ServicesPage() {
   const services = [
@@ -145,7 +145,7 @@ export default function ServicesPage() {
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${servicesImg})`,
-              backgroundSize: "fit-cover",
+              backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}

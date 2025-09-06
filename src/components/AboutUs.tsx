@@ -5,7 +5,7 @@ import FestusImage from "../assets/images/team/festus.png";
 // import CreativeImage from "../assets/images/team/festus.png";
 // import OperationsImage from "../assets/images/team/festus.png";
 // import InternationalImage from "../assets/images/team/festus.png";
-import AboutUsImg from "../assets/images/logos/wyte.svg";
+import AboutUsImg from "../assets/images/pages/about-us.jpg";
 import logoImg from "../assets/images/logos/wyte.svg";
 
 
@@ -121,8 +121,8 @@ export default function AboutUsPage() {
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${AboutUsImg})`,
-              backgroundSize: "fit-cover",
-              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundPosition: "right",
               backgroundRepeat: "no-repeat",
             }}
           >

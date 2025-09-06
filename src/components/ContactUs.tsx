@@ -5,7 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import contactUsImg from "../assets/images/logos/wyte.svg";
+import contactUsImg from "../assets/images/pages/contact-us.jpg";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
 
@@ -134,8 +134,8 @@ export default function ContactUsPage() {
             className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 relative rounded-2xl overflow-hidden p-8 lg:p-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] min-h-[500px]"
             style={{
               backgroundImage: `url(${contactUsImg})`,
-              backgroundSize: "fit-cover",
-              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundPosition: "right",
               backgroundRepeat: "no-repeat",
             }}
           >
