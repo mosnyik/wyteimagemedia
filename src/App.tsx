@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import NotFoundPage from "./pages/not-found";
 
 function App() {
   const scrollRef = useRef(null);
@@ -69,6 +70,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

@@ -149,28 +149,6 @@ function Featured() {
         });
       };
     }, [isPaused]);
-  
-
-  // useEffect(() => {
-  //   projects.forEach((project, projectIndex) => {
-  //     if (project.images.length > 1 && !isPaused[projectIndex]) {
-  //       intervalRefs.current[projectIndex] = setInterval(() => {
-  //         setCurrentIndexes((prev) => ({
-  //           ...prev,
-  //           [projectIndex]:
-  //             ((prev[projectIndex] || 0) + 1) % project.images.length,
-  //         }));
-  //       }, 3000); // Change image every 3 seconds
-  //     }
-  //   });
-
-  //   // Cleanup intervals
-  //   return () => {
-  //     Object.values(intervalRefs.current).forEach((interval) => {
-  //       if (interval) clearInterval(interval);
-  //     });
-  //   };
-  // }, [isPaused]);
 
   const handleHover = (index: number) => {
     cards[index].start({ y: "0" });
