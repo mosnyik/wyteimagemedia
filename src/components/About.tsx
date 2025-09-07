@@ -1,9 +1,11 @@
-const socials = [
-  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
-  { name: "YouTube", link: "" },
-  { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
-  // { name: "Linkedin", link: "" },
-];
+// const socials = [
+//   { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+//   { name: "YouTube", link: "" },
+//   { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
+//   // { name: "Linkedin", link: "" },
+// ];
+
+import { socials } from "./shared";
 
 function About() {
   return (

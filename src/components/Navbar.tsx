@@ -2,31 +2,32 @@ import { useEffect, useRef, useState } from "react";
 import splitStringByRegex from "../utils/splitString";
 import { NavLink } from "react-router-dom";
 import logoImg from "../assets/images/logos/wyte.svg";
+import { addresses, email, navLinks, socials } from "./shared";
 
-const navLinks = [
-  { name: "Profile Magazine", path: "/profile-magazine" },
-  { name: "Services", path: "/services" },
-  { name: "Events", path: "/events" },
-  { name: "About us", path: "/about-us" },
-  { name: "Contact us", path: "/contact-us" },
-];
+// const navLinks = [
+//   { name: "Profile Magazine", path: "/profile-magazine" },
+//   { name: "Services", path: "/services" },
+//   { name: "Events", path: "/events" },
+//   { name: "About us", path: "/about-us" },
+//   { name: "Contact us", path: "/contact-us" },
+// ];
 
 
-const socials = [
-  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
-  { name: "YouTube", link: "" },
-  { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
-  // { name: "Linkedin", link: "" },
-];
+// const socials = [
+//   { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+//   { name: "YouTube", link: "" },
+//   { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
+//   // { name: "Linkedin", link: "" },
+// ];
 
-const addresses = [
-  "United Kingdom",
-  "Leeds",
-  "",
-  "Abuja, Nigeria",
-  "Federal Capital Territory",
-];
-const email = "wyteimagemediaofficial@gmail.com";
+// const addresses = [
+//   "United Kingdom",
+//   "Leeds",
+//   "",
+//   "Abuja, Nigeria",
+//   "Federal Capital Territory",
+// ];
+// const email = "wyteimagemediaofficial@gmail.com";
 
 function Navbar() {
   const [mouseEnteredNavItem, setMouseEnteredNavItem] = useState(-1);

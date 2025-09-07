@@ -12,6 +12,7 @@ import contactUsImgWide from   "../assets/images/pages/contact-us.jpg";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
 import HeroSection from "./HeroSection";
+import { socials } from "./shared";
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -120,12 +121,12 @@ export default function ContactUsPage() {
         "Absolutely. We work with various budget ranges and will create a customized solution that maximizes value while meeting your specific requirements and objectives.",
     },
   ];
-  const socials = [
-    { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
-    { name: "YouTube", link: "" },
-    { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
-    // { name: "Linkedin", link: "" },
-  ];
+  // const socials = [
+  //   { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+  //   { name: "YouTube", link: "" },
+  //   { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
+  //   // { name: "Linkedin", link: "" },
+  // ];
 
   return (
     <div className="w-full bg-zinc-900 text-white min-h-screen">

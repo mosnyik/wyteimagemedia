@@ -1,30 +1,6 @@
 import { NavLink } from "react-router-dom";
-const socials = [
-  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
-  { name: "YouTube", link: "" },
-  { name: "Facebook", link: "https://www.facebook.com/share/1F4erv7tqq/" },
-  // { name: "Linkedin", link: "" },
-];
+import { addresses, email, navLinks, phone, socials } from "./shared";
 
-const addresses = [
-  "United Kingdom",
-  "Leeds",
-  "",
-  "Abuja, Nigeria",
-  "Federal Capital Territory",
-];
-
-
-const navLinks = [
-  { name: "Profile Magazine", path: "/profile-magazine" },
-  { name: "Services", path: "/services"},
-  { name: "Events", path: "/events" },
-  { name: "About us", path: "/about-us" },
-  { name: "Contact us", path: "/contact-us" },
-];
-
-const email = "wyteimagemediaofficial@gmail.com";
-const phone = "+447 733 7865";
 
 function Footer() {
   return (
