@@ -54,7 +54,7 @@ function About() {
             <ul>
               {socials.map((item, index) => (
                 <li key={index}>
-                  <a className="link-underline" href={item.link}>
+                  <a className="link-underline" href={item.link} target="_blank">
                     {item.name}
                   </a>
                 </li>

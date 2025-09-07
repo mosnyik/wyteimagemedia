@@ -1,5 +1,5 @@
 export const socials = [
-  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/" },
+  { name: "Instagram", link: "https://www.instagram.com/wyteimagemedia/", },
   {
     name: "YouTube",
     link: "https://www.youtube.com/channel/UCMVZsB7oeGMVegSsB9EuxvQ",
